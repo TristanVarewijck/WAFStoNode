@@ -1,0 +1,266 @@
+{
+  "status": "ok",
+  "totalResults": 70,
+  "articles": [
+    {
+      "source": {
+        "id": null,
+        "name": "Investor's Business Daily"
+      },
+      "author": "Investor's Business Daily",
+      "title": "Futures Seek Direction After Stock Market Sell-Off; Apple, Tesla Drop - Investor's Business Daily",
+      "description": "Dow Jones futures erased losses Monday, following Friday's heavy losses.",
+      "url": "https://www.investors.com/market-trend/stock-market-today/dow-jones-futures-slide-after-stock-market-sell-off-apple-tesla-drop/",
+      "urlToImage": "https://www.investors.com/wp-content/uploads/2020/04/Stock-Tesla-09-adobe.jpg",
+      "publishedAt": "2022-02-14T14:18:00Z",
+      "content": "The Dow Jones Industrial Average opened lower Monday, seeking direction after Friday's stock market sell-off. Database software developer Splunk soared on merger chatter. And Arista Networks and Cont… [+6392 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "The Guardian"
+      },
+      "author": "Edward Helmore",
+      "title": "‘Heist of the century’: US bitcoin case tests ability to crack down on cybercrime - The Guardian",
+      "description": "Case may be first time government has brought a case not on the basis of an alleged theft, but on the couple’s alleged efforts to conceal their identities",
+      "url": "https://amp.theguardian.com/law/2022/feb/14/us-bitcoin-case-cybercrime",
+      "urlToImage": null,
+      "publishedAt": "2022-02-14T13:56:00Z",
+      "content": "Law (US)Case may be first time government has brought a case not on the basis of an alleged theft, but on the couples alleged efforts to conceal their identities\r\nMon 14 Feb 2022 07.00 GMT\r\nThe prose… [+5397 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "CNBC"
+      },
+      "author": "Jeff Cox",
+      "title": "Fed's Bullard says the central bank's 'credibility is on the line,' needs to 'front-load' rate hikes - CNBC",
+      "description": "St. Louis Fed President James Bullard made his case for a rapid move higher in rates, saying that the central bank needs to react to inflation.",
+      "url": "https://www.cnbc.com/2022/02/14/bullard-say-the-fed-needs-to-front-load-tightening-because-inflation-is-possibly-accelerating.html",
+      "urlToImage": "https://image.cnbcfm.com/api/v1/image/105022735-IMG_2131.JPG?v=1536083765",
+      "publishedAt": "2022-02-14T13:37:28Z",
+      "content": "St. Louis Federal Reserve President James Bullard made his case for a rapid move higher in interest rates, saying Monday that the central bank needs to react to accelerating inflation.\r\n\"I do think w… [+3619 chars]"
+    },
+    {
+      "source": {
+        "id": "the-washington-post",
+        "name": "The Washington Post"
+      },
+      "author": "Christian Davenport",
+      "title": "Jared Isaacman to fund 3 SpaceX flights, including first crewed launch of Starship - The Washington Post",
+      "description": "The privately financed Polaris space program would include the first spacewalk by private citizens and the first crewed launch of the Starship, Elon Musk's gigantic spacecraft he hopes will fly to Mars.",
+      "url": "https://www.washingtonpost.com/technology/2022/02/14/jared-isaacman-polaris-spacex-starship-inspiration4/",
+      "urlToImage": "https://www.washingtonpost.com/wp-apps/imrs.php?src=https://arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/JXD3HXEM6MI6ZDO5KIJWTCGSMM.jpg&w=1440",
+      "publishedAt": "2022-02-14T13:00:51Z",
+      "content": "The first flight, which could come by the end of the year, will aim to send a crew of four farther than any other human spaceflight in 50 years and feature the first private-citizen spacewalk, Isaacm… [+9541 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Benzinga"
+      },
+      "author": null,
+      "title": "Elon Musk Hints At SpaceX, Starlink Accepting Dogecoin For Merch - Benzinga - Benzinga",
+      "description": "Tesla, Inc. (NASDAQ:TSLA) CEO Elon Musk h...",
+      "url": "https://www.benzinga.com/markets/cryptocurrency/22/02/25594751/elon-musk-hints-at-spacex-starlink-accepting-dogecoin-for-merch",
+      "urlToImage": "https://cdn2.benzinga.com/files/imagecache/og_image_social_share_1200x630/images/story/2012/dog-g486ac3126_1920_1.jpg?width=720",
+      "publishedAt": "2022-02-14T12:53:00Z",
+      "content": "Tesla, Inc. (NASDAQ:TSLA) CEO Elon Musk has hinted that SpaceX and Starlink could soon accept payment for merchandise in Dogecoin (CRYPTO: DOGE).\r\nWhat Happened: Earlier Monday, Twitter user Johnna C… [+1301 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "CNBC"
+      },
+      "author": "Peter Schacknow",
+      "title": "Stocks making the biggest moves in the premarket: Splunk, Blackstone, Aerojet Rocketdyne and more - CNBC",
+      "description": "The stocks making the biggest moves in premarket trading include Splunk, Blackstone, Aerojet Rocketdyne, and more.",
+      "url": "https://www.cnbc.com/2022/02/14/stocks-making-the-biggest-moves-in-the-premarket-splunk-blackstone-aerojet-rocketdyne-and-more.html",
+      "urlToImage": "https://image.cnbcfm.com/api/v1/image/106972429-16364108192021-11-08t215634z_1516855190_rc2jqq9dbnhe_rtrmadp_0_usa-stocks.jpeg?v=1636410879",
+      "publishedAt": "2022-02-14T12:40:27Z",
+      "content": "Take a look at some of the biggest movers in the premarket:\r\nSplunk (SPLK) Cisco Systems (CSCO) made a more than $20 billion takeover bid for the cloud software company, according to people familiar … [+2631 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "CNBC"
+      },
+      "author": "Elliot Smith",
+      "title": "Market pullback will be worse than Crimea if Russia invades, Goldman Sachs says - CNBC",
+      "description": "The hit to stock markets from a potential Russian invasion of Ukraine would be worse than that seen after the annexation of Crimea in 2014, according to Goldman Sachs.",
+      "url": "https://www.cnbc.com/2022/02/14/market-pullback-will-be-worse-than-crimea-if-russia-invades-goldman-sachs.html",
+      "urlToImage": "https://image.cnbcfm.com/api/v1/image/107013157-16444287852022-02-09t173154z_1695405783_rc2bgs9mtvyh_rtrmadp_0_ukraine-crisis-east.jpeg?v=1644428845",
+      "publishedAt": "2022-02-14T12:27:34Z",
+      "content": "The hit to stock markets from a potential Russian invasion of Ukraine would be worse than that seen after the annexation of Crimea in 2014, according to Goldman Sachs Chief Global Equity Strategist P… [+3882 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "MarketWatch"
+      },
+      "author": "Barbara Kollmeyer",
+      "title": "Goldman Sachs sees three paths for the S&P 500 ---and one would leave stocks nearly 20% lower - MarketWatch",
+      "description": "Critical information for the U.S. trading day",
+      "url": "https://www.marketwatch.com/story/goldman-sachs-sees-three-paths-for-the-s-p-500-and-one-would-leave-it-nearly-20-lower-11644840864",
+      "urlToImage": "https://images.mktw.net/im-485568/social",
+      "publishedAt": "2022-02-14T12:14:00Z",
+      "content": "Fear is in the air, with global equities bouncing around and havens on the rise as investors enter a decisive week that could bring a war or regional conflict to Europe, if Russia cant be persuaded t… [+7223 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Vox"
+      },
+      "author": "Peter Kafka",
+      "title": "Facebook’s ad business struggles after Apple’s iOS changes - Vox.com",
+      "description": "Facebook says Apple’s privacy changes will cost it $10 billion next year. Can it figure out a solution?",
+      "url": "https://www.vox.com/recode/22929715/facebook-apple-ads-meta-privacy",
+      "urlToImage": "https://cdn.vox-cdn.com/thumbor/M1b0962llNhb_YzDIuhiC8rLIvA=/0x481:6720x3999/fit-in/1200x630/cdn.vox-cdn.com/uploads/chorus_asset/file/23236153/1178141765.jpg",
+      "publishedAt": "2022-02-14T12:00:00Z",
+      "content": "Facebook built one of the most amazing money machines the world has ever seen. Then Apple came and threw a wrench in the gears.\r\nThats one of the narratives that sprang from last weeks news, when Fac… [+9162 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "CNBC"
+      },
+      "author": "Ryan Browne",
+      "title": "British authorities just seized NFTs for the first time, in a £1.4 million fraud probe - CNBC",
+      "description": "Officials at Her Majesty's Revenue and Customs seized three non-fungible tokens as part of a probe into suspected tax fraud.",
+      "url": "https://www.cnbc.com/2022/02/14/uk-hmrc-seizes-nfts-for-first-time-in-tax-fraud-probe.html",
+      "urlToImage": "https://image.cnbcfm.com/api/v1/image/107014809-1644836543680-gettyimages-1321768916-ord34330_2021060411946040.jpeg?v=1644836683",
+      "publishedAt": "2022-02-14T11:51:43Z",
+      "content": "A CryptoPunk NFT on display at Sotheby's on June 4, 2021 in New York City.\r\nLONDON Britain's tax watchdog has seized three non-fungible tokens, in what is thought to be the first seizure of NFTs by a… [+2257 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "MarketWatch"
+      },
+      "author": "Tomi Kilgore",
+      "title": "Nio stock falls after downbeat China auto sales data, Tesla shares also take a hit - MarketWatch",
+      "description": "Share of China-based electric vehicle maker Nio Inc. undefined sank 3.5% in premarket trading Monday, after data showing that China's car sales fell for the...",
+      "url": "https://www.marketwatch.com/story/nio-stock-falls-after-downbeat-china-auto-sales-data-tesla-shares-also-take-a-hit-2022-02-14",
+      "urlToImage": "https://s.wsj.net/public/resources/MWimages/MW-GP644_MicroS_ZG_20180906154215.jpg",
+      "publishedAt": "2022-02-14T11:37:00Z",
+      "content": "Share of China-based electric vehicle maker Nio Inc. \r\n NIO,\r\n -0.62%\r\nsank 3.5% in premarket trading Monday, after data showing that China's car sales fell for the eighth straight month in January. … [+679 chars]"
+    },
+    {
+      "source": {
+        "id": "cnn",
+        "name": "CNN"
+      },
+      "author": "Jen Christensen, Brenda Goodman and Jamie Gumbrecht, CNN",
+      "title": "Covid-19 vaccine authorization for younger children delayed as FDA seeks more data - CNN",
+      "description": "Parents will have to keep waiting to find out when their youngest children can get a Covid-19 vaccine.",
+      "url": "https://www.cnn.com/2022/02/11/health/fda-postpones-covid-19-kid-vaccine-meeting/index.html",
+      "urlToImage": "https://cdn.cnn.com/cnnnext/dam/assets/220207152234-pfizer-booster-dose-japan-0120-super-tease.jpg",
+      "publishedAt": "2022-02-14T11:14:00Z",
+      "content": null
+    },
+    {
+      "source": {
+        "id": "financial-times",
+        "name": "Financial Times"
+      },
+      "author": null,
+      "title": "New Peloton chief cools sale talk for home fitness company - Financial Times",
+      "description": "Barry McCarthy wants to focus on digital content as activist urges group to find a buyer",
+      "url": "https://www.ft.com/content/034ef665-6604-4cb9-b1af-b09e8b5ede39",
+      "urlToImage": "https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F9494903e-768f-430b-9e56-130a3d779124.jpg?source=next-opengraph&fit=scale-down&width=900",
+      "publishedAt": "2022-02-14T11:00:31Z",
+      "content": "Peloton’s new chief executive has dismissed the idea that the home fitness group could be put up for sale, pledging instead to pursue growth by doubling down on content, expanding to new countries an… [+3874 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Decrypt"
+      },
+      "author": "Andrew Asmakov",
+      "title": "Bitcoin Hashrate Hits New All-Time High Amid Bearish Macro Signals - Decrypt",
+      "description": "The Bitcoin network’s hash rate has exploded to a new record high over the weekend, making the network as robust as ever.",
+      "url": "https://decrypt.co/92868/bitcoin-hashrate-hits-new-all-time-high-amid-bearish-macro-signals",
+      "urlToImage": "https://cdn.decrypt.co/resize/1024/height/512/wp-content/uploads/2021/12/shutterstock_1912078063-gID_4.jpg",
+      "publishedAt": "2022-02-14T10:56:54Z",
+      "content": "Bitcoins (BTC) hashrate recorded its biggest increase of the year on Saturday, jumping from 188.40 exahashes per second (EH/s) to a new all-time high of 248.11 EH/s in just one day, according to data… [+2334 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Fox Business"
+      },
+      "author": "Lawrence Richard",
+      "title": "American Airlines LA-to-DC flight lands in Kansas City because of unruly passenger: report - Fox Business",
+      "description": "An American Airlines flight going across the country had to make an emergency landing in Kansas City, Missouri, on Sunday afternoon after a passenger allegedly caused a disturbance mid-flight, according to a report.",
+      "url": "https://www.foxbusiness.com/lifestyle/american-airlines-la-dc-flight-kansas-city-unruly-passenger",
+      "urlToImage": "https://a57.foxnews.com/static.foxbusiness.com/foxbusiness.com/content/uploads/2022/01/0/0/American-Airlines.jpg?ve=1&tl=1",
+      "publishedAt": "2022-02-14T10:51:51Z",
+      "content": "An American Airlines flight going across the country had to make an emergency landing in Kansas City, Missouri, on Sunday afternoon after a passenger allegedly caused a disturbance mid-flight, accord… [+1492 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "MarketWatch"
+      },
+      "author": "Steve Goldstein",
+      "title": "U.S. stock futures flatten out as Russian foreign minister says diplomacy to continue - MarketWatch",
+      "description": "U.S. stock futures moved off their worst levels after Russia's foreign minister was quoted as saying diplomacy will continue",
+      "url": "https://www.marketwatch.com/story/u-s-stock-futures-slump-on-worries-a-russian-invasion-of-ukraine-is-imminent-11644835646",
+      "urlToImage": "https://images.mktw.net/im-485537/social",
+      "publishedAt": "2022-02-14T10:47:00Z",
+      "content": "U.S. stock futures moved off their lowest levels of the session on Monday as Russias foreign minister was quoted as saying diplomacy would continue.\r\nWhats happening\r\n<ul><li> \r\n Futures on the Dow J… [+1888 chars]"
+    },
+    {
+      "source": {
+        "id": "cnn",
+        "name": "CNN"
+      },
+      "author": "Michelle Toh, CNN Business",
+      "title": "The US is about to get its first Chinese IPO in months - CNN",
+      "description": "The United States is about to get its first initial public offering from a Chinese company in months, even as US-China tensions and regulatory scrutiny remain high.",
+      "url": "https://www.cnn.com/2022/02/14/investing/nasdaq-us-chinese-ipo-intl-hnk/index.html",
+      "urlToImage": "https://cdn.cnn.com/cnnnext/dam/assets/220214020912-nasdaq-nyc-01282022-restricted-super-tease.jpg",
+      "publishedAt": "2022-02-14T09:02:00Z",
+      "content": null
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Cointelegraph"
+      },
+      "author": "Helen Partz",
+      "title": "Crypto miners exempt from IRS reporting rules, US Treasury affirms - Cointelegraph",
+      "description": "The U.S. crypto mining industry is about to score a major legal win as the Treasury Department plans to officially spare crypto miners from tax reporting rules.",
+      "url": "https://cointelegraph.com/news/crypto-miners-exempt-from-irs-reporting-rules-us-treasury-affirms",
+      "urlToImage": "https://images.cointelegraph.com/images/1200_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjItMDIvNTczNDFkZTctODY1Zi00MzJmLTlmMTAtN2I5N2IwYTdjODM5LmpwZw==.jpg",
+      "publishedAt": "2022-02-14T08:57:44Z",
+      "content": "The cryptocurrency industry in the United States is about to score a major legal win as the United States Treasury Department plans to spare crypto miners and other ancillary parties from tax reporti… [+2348 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "CNBC"
+      },
+      "author": "Weizhen Tan",
+      "title": "'Very robust growth:' CEO of Singapore's largest bank says 2021 was one of the best years - CNBC",
+      "description": "The bank on Monday reported its full-year net profit rose 44% to a record of 6.8 billion Singapore dollars ($5.04 billion).",
+      "url": "https://www.cnbc.com/2022/02/14/dbs-ceo-piyush-gupta-on-fourth-quarter-earnings-shareholder-dividends.html",
+      "urlToImage": "https://image.cnbcfm.com/api/v1/image/106876328-1619745508516-gettyimages-1155823729-BC_HKStreetStock__2139.jpeg?v=1644822647",
+      "publishedAt": "2022-02-14T08:46:48Z",
+      "content": "Singapore's largest lender DBS Group reported a record full-year profit for 2021, and its CEO Piyush Gupta told CNBC last year was \"one of the best years\" he's seen.\r\n\"That has been a solid year, per… [+1908 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "Cointelegraph"
+      },
+      "author": "William Suberg",
+      "title": "‘Up only’ for BTC fundamentals — 5 things to watch in Bitcoin this week - Cointelegraph",
+      "description": "BTC price action targets $40,000 while Bitcoin fundamentals lead a solid slew of  positive on-chain indicators.",
+      "url": "https://cointelegraph.com/news/up-only-for-btc-fundamentals-5-things-to-watch-in-bitcoin-this-week",
+      "urlToImage": "https://images.cointelegraph.com/images/1200_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjItMDIvNzBkMzkzNTItYzdjNS00NGVlLWFiMTctMTg2NDMxYjZkN2U3LmpwZw==.jpg",
+      "publishedAt": "2022-02-14T07:53:47Z",
+      "content": "Bitcoin (BTC) starts the week with a slow drag downhill toward pivotal support at $40,000.\r\nAfter bulls had something to celebrate last week, the current environment looks like a fresh dose of realit… [+7740 chars]"
+    }
+  ]
+}

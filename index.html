@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>homepage</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script
+      src="https://kit.fontawesome.com/08db6ddcac.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li>
+          <a href="/">
+            <img src="./assets/logo/TechDefined-icon.svg" alt="" />
+          </a>
+        </li>
+        <li>
+          <form id="form" style="max-width: 450px; margin: auto">
+            <div class="input-wrapper">
+              <input id="input" type="text" placeholder="search..." />
+              <button type="submit">
+                <i class="fas fa-search"></i>
+              </button>
+            </div>
+          </form>
+        </li>
+        <li>
+          <button type="button">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </li>
+      </ul>
+    </nav>
+    <header>
+      <h1>Everything <span>Tech</span></h1>
+    </header>
+
+    <!-- COMMON TOPICS  -->
+
+    <!-- lOADING -->
+    <section id="loading">
+      <i class="fas fa-spinner"></i>
+      <p>Searching for the latest Articles</p>
+    </section>
+
+    <!-- OUTPUT -->
+    <section>
+      <ul id="cardsContainer"></ul>
+    </section>
+
+    <!-- TO TOP BUTTON -->
+    <button onclick="topFunction()" id="toTopButton" title="Go to top">
+      <i class="fa-solid fa-arrow-up"></i>Top
+    </button>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
