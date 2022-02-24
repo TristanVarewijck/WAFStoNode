@@ -1,4 +1,4 @@
-## WAFS
+## Project WAFS
 
 _Shields that represent my project - They change over time._ (https://shields.io/)
 
@@ -6,7 +6,7 @@ _Shields that represent my project - They change over time._ (https://shields.io
 
 ### TechDefined Concept Design
 
-![TechDefined-concept-design](https://github.com/TristanVarewijck/TechDefined/blob/main/assets/images/concept-display.png);
+![TechDefined-concept-design](https://github.com/TristanVarewijck/TechDefined/blob/main/assets/images/concept-display.png)
 
 ### Live Demo
 

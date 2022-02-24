@@ -3,14 +3,15 @@ const apiKey = "c9269540edae44718bb24d0041c75162";
 // LOADING STATE
 // selecting loading div
 const loader = document.getElementById("loading");
-function displayLoading() {
+
+displayLoading = () => {
   loader.classList.add("display");
-}
+};
 
 // hiding loading
-function hideLoading() {
+hideLoading = () => {
   loader.classList.remove("display");
-}
+};
 
 const input = document.getElementById("input");
 const form = document.getElementById("form");
@@ -60,7 +61,7 @@ function getData(e) {
         </div>
   
   `;
-        var articleCard = document.createElement("li");
+        const articleCard = document.createElement("li");
         articleCard.className = "articleCard";
         articleCard.innerHTML = articleContents;
         articlesContainer.appendChild(articleCard);
@@ -75,22 +76,27 @@ window.onload = getData();
 //Get the button:
 const mybutton = document.getElementById("toTopButton");
 
-window.onscroll = function () {
-  scrollFunction();
+// NAV SCROLL BAHAVIOUR
+const navbar = document.getElementById("navbar");
+
+let prevScrollpos = window.scrollY;
+window.onscroll = () => {
+  // scrollFunction();
+
+  document.body.scrollTop > 20 || document.documentElement.scrollTop > 20
+    ? (mybutton.style.display = "block")
+    : (mybutton.style.display = "none");
+
+  let currentScrollPos = window.scrollY;
+
+  prevScrollpos > currentScrollPos
+    ? (navbar.style.top = "0")
+    : (navbar.style.top = "-75px");
+
+  prevScrollpos = currentScrollPos;
 };
 
-function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    mybutton.style.display = "block";
-  } else {
-    mybutton.style.display = "none";
-  }
-}
-
-function topFunction() {
+topFunction = () => {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
-}
-
-// TOPIC FILTER
-const topics = ["Cryptocurrency", "Cars", "Artificial intelligence"];
+};

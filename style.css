@@ -3,11 +3,16 @@
 /*  font-family: "Noto Sans", sans-serif */
 
 * {
-  font-family: "Lato", sans-serif;
-  background-color: var(--background);
-  overflow-x: hidden;
-  color: var(--text);
+  /* overflow-x: hidden; */
   scroll-behavior: smooth;
+}
+
+:root {
+  --background: #fcfbff;
+  --text: #151515;
+  --highlight: #ffffff;
+  --CTA: #001aff;
+  --gray: #cecece;
 }
 
 h1,
@@ -20,17 +25,12 @@ h6 {
   margin: 0;
 }
 
-:root {
-  --background: #fcfbff;
-  --text: #151515;
-  --highlight: #ffffff;
-  --CTA: #001aff;
-  --gray: #cecece;
-}
-
 body {
+  background-color: var(--background);
   margin-left: 2em;
   margin-right: 2em;
+  font-family: "Lato", sans-serif;
+  color: var(--text);
 }
 
 button {
@@ -40,14 +40,8 @@ button {
   border: none;
 }
 
-a {
-  color: var(--CTA);
-  text-decoration: none;
-  font-size: 12px;
-  display: block;
-}
-
-ul {
+ul,
+p {
   padding: 0;
   margin: 0;
 }
@@ -58,12 +52,15 @@ textarea:focus,
 button:focus {
   outline: none;
 }
+
 nav {
-  position: relative;
+  position: -webkit-sticky;
+  position: sticky;
   top: 0;
   width: 100%;
-  background-color: none;
-  height: 64px;
+  height: 75px;
+  background-color: var(--background);
+  transition: top 0.2s;
 }
 
 nav ul {
