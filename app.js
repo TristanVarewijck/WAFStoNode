@@ -100,3 +100,9 @@ topFunction = () => {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 };
+
+// display current date
+
+const datePlaceholder = document.getElementById("currentDate");
+let currentDate = new Date().toLocaleDateString().replaceAll("-", " / ");
+datePlaceholder.innerHTML = currentDate;

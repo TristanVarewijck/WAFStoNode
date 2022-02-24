@@ -9,7 +9,7 @@
 
 :root {
   --background: #fcfbff;
-  --text: #151515;
+  --text: #43466a;
   --highlight: #ffffff;
   --CTA: #001aff;
   --gray: #cecece;
@@ -38,6 +38,7 @@ button {
   padding: 0;
   margin: 0;
   border: none;
+  background: none;
 }
 
 ul,
@@ -51,6 +52,32 @@ select:focus,
 textarea:focus,
 button:focus {
   outline: none;
+}
+
+input {
+  background: none;
+  border: none;
+}
+
+.input-wrapper {
+  background: var(--highlight);
+  width: 15em;
+  height: 2.2em;
+  padding: 6px 9px 6px 9px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0px 2.9822px 24px rgba(139, 168, 255, 0.15);
+}
+
+.input-wrapper input {
+  font-family: "Lato", sans-serif;
+}
+
+.input-wrapper input::placeholder {
+  font-family: "Lato", sans-serif;
+  opacity: 67%;
+  font-size: 14px;
 }
 
 nav {
@@ -69,26 +96,25 @@ nav ul {
   justify-content: space-between;
   align-items: center;
   list-style-type: none;
-  width: 100%;
+  /* width: 100%; */
   height: 100%;
+}
+
+nav ul li:nth-child(1) {
+  display: flex;
+  align-items: center;
 }
 
 nav ul li:nth-child(1) img {
   width: 30px;
   height: auto;
+  margin-right: 1em;
 }
 
-nav ul li:nth-child(2) form div {
-  position: relative;
-  background: var(--highlight);
-  min-width: 350px;
-  max-width: 400px;
-  height: 40px;
-  border: solid 1px #ececec;
-  box-shadow: 0px 5px 18px rgba(219, 219, 219, 0.15);
-  border-radius: 9px;
-  display: flex;
-  align-items: center;
+nav ul li:nth-child(1) p {
+  font-size: 14px;
+  opacity: 67%;
+  display: inline-block;
 }
 
 nav ul li:nth-child(2) form div input[type="text"] {

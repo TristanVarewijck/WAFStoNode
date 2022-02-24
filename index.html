@@ -20,27 +20,29 @@
               alt="TechDefined-logo.svg"
             />
           </a>
-        </li>
-
-        <!-- current date -->
-        <li>
-          <p>02 Mar 2022</p>
+          <!-- current date -->
+          <p id="currentDate">02 Mar 2022</p>
         </li>
 
         <li>
           <form id="form" style="max-width: 450px; margin: auto">
-            <input id="input" type="text" placeholder="search..." />
+            <div class="input-wrapper">
+              <input id="input" type="text" placeholder="search for a topic" />
+              <button type="submit">
+                <img
+                  src="./assets/icons/search-icon.svg"
+                  alt="search-icon"
+                  width="26px"
+                />
+              </button>
+            </div>
           </form>
-        </li>
-        <li>
-          <button type="button">
-            <img src="./assets/icons/search-icon.svg" alt="search-icon" />
-          </button>
         </li>
       </ul>
     </nav>
     <header>
-      <h1>Everything<span>Tech</span></h1>
+      <!-- generated from input -->
+      <h1>Breaking News</h1>
     </header>
 
     <!-- COMMON TOPICS  -->
