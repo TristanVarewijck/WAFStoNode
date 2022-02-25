@@ -13,6 +13,7 @@
   --highlight: #ffffff;
   --CTA: #001aff;
   --gray: #cecece;
+  /* --active:  */
 }
 
 h1,
@@ -31,6 +32,7 @@ body {
   margin-right: 2em;
   font-family: "Lato", sans-serif;
   color: var(--text);
+  overflow-x: hidden;
 }
 
 button {
@@ -45,6 +47,7 @@ ul,
 p {
   padding: 0;
   margin: 0;
+  list-style-type: none;
 }
 
 input:focus,
@@ -63,7 +66,7 @@ input {
   background: var(--highlight);
   width: 15em;
   height: 2.2em;
-  padding: 6px 9px 6px 9px;
+  padding: 6px 11px 6px 11px;
   border-radius: 4px;
   display: flex;
   justify-content: space-between;
@@ -88,6 +91,7 @@ nav {
   height: 75px;
   background-color: var(--background);
   transition: top 0.2s;
+  z-index: 1;
 }
 
 nav ul {
@@ -121,7 +125,6 @@ nav ul li:nth-child(2) form div input[type="text"] {
   background-color: var(--highlight);
   border: none;
   width: 100%;
-  padding-left: 25px;
   color: var(--text);
 }
 nav ul li:nth-child(2) form div input[type="text"]::placeholder {
@@ -134,7 +137,6 @@ nav ul li:nth-child(2) form div input[type="text"]::placeholder {
 nav ul li:nth-child(2) form div button {
   background-color: var(--highlight);
   border: none;
-  padding-right: 25px;
 }
 
 nav ul li:nth-child(3) button i {
@@ -147,7 +149,7 @@ header {
 
 header h1 {
   font-size: 3em;
-  text-align: center;
+  text-align: left;
   margin-bottom: 1;
   margin-top: 1em;
 }
@@ -185,10 +187,12 @@ header h1 span {
   color: var(--text);
 }
 
-.articleCard {
-  padding-bottom: 3em;
-  margin-bottom: 3em;
-  border-bottom: 1px solid #15151521;
+.articleCard h2 {
+  font-size: 18px;
+  letter-spacing: 0.5%;
+  font-weight: 600;
+  line-height: 25px;
+  margin-top: 0.7em;
 }
 
 .articleCard small {
@@ -222,6 +226,17 @@ header h1 span {
 .articleCard a span {
   display: block;
   font-weight: bold;
+}
+
+.articleCard:first-of-type {
+  background: var(--highlight);
+  box-shadow: 0px 2.9822px 24px rgba(139, 168, 255, 0.15);
+  border-radius: 19px;
+  margin-bottom: 3em;
+}
+
+.articleCard:first-of-type img {
+  border-radius: 19px;
 }
 
 #backbtn {
@@ -271,4 +286,46 @@ header h1 span {
 
 #toTopButton:hover {
   background-color: #555; /* Add a dark-grey background on hover */
+}
+
+#filtersContainer {
+  display: flex;
+  justify-content: start;
+  overflow-x: auto;
+  flex-wrap: nowrap;
+  margin-top: 2.2em;
+}
+
+#filtersContainer::-webkit-scrollbar {
+  display: none;
+}
+
+.filterItem {
+  flex-shrink: 0;
+  flex-grow: 1;
+  margin-right: 2.5em;
+  text-align: center;
+}
+
+.filterItem button {
+  font-family: "Noto Sans", sans-serif;
+  color: var(--text);
+  opacity: 67%;
+  font-weight: 600;
+  font-size: 14px;
+  width: fit-content;
+  transition: 2s ease-in;
+}
+
+.filterItem button:hover,
+.filterItem button:active {
+  background: -webkit-linear-gradient(225deg, #331dbe 16.67%, #2134e4 82.29%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 1;
+}
+
+.filterItem button:active::before {
+  content: " ";
+  width: 15px;
 }

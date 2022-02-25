@@ -50,17 +50,21 @@ function getData(e) {
 
         // MAKE CARD
         articleContents = `
-        <h1>${article.title}</h1>
-        <small><i class="fa-solid fa-calendar-days"></i>${publishedAt}</small>
-        <small><i class="fa-solid fa-file-signature"></i> ${article.author}  </small>
         <img src="${article.urlToImage}" alt="article banner" width="100%" height="auto"></img>
 
-        <div> 
-            <p>${article.content}</p>
-            <a href="${article.url}"> <span>Source:</span> ${article.url} </a>
+        <div>
+          <h2>${article.title}</h2>
+            <div>
+            <small><i class="fa-solid fa-calendar-days"></i>${publishedAt}</small>
+            <small><i class="fa-solid fa-file-signature"></i> ${article.author}</small>
+            </div>
         </div>
-  
   `;
+
+        // <div>
+        //     <p>${article.content}</p>
+        //     <a href="${article.url}"> <span>Source:</span> ${article.url} </a>
+        // </div>
         const articleCard = document.createElement("li");
         articleCard.className = "articleCard";
         articleCard.innerHTML = articleContents;
@@ -106,3 +110,30 @@ topFunction = () => {
 const datePlaceholder = document.getElementById("currentDate");
 let currentDate = new Date().toLocaleDateString().replaceAll("-", " / ");
 datePlaceholder.innerHTML = currentDate;
+
+// filters
+
+const filters = [
+  "All",
+  "Crypto",
+  "AI",
+  "Elon Musk",
+  "5G",
+  "Amazon",
+  "Metaverse",
+  "Jeff Bezos",
+];
+const filtersContainer = document.getElementById("filtersContainer");
+
+filters.forEach((filter) => {
+  const filterItem = document.createElement("li");
+  filterItem.className = "filterItem";
+  filtersContainer.appendChild(filterItem);
+
+  // NEXT ADD BUTTONS
+
+  const filterButton = document.createElement("button");
+  filterButton.className = filter;
+  filterItem.appendChild(filterButton);
+  filterButton.innerHTML = filter;
+});
