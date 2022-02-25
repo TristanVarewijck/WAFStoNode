@@ -11,9 +11,7 @@
   --background: #fcfbff;
   --text: #43466a;
   --highlight: #ffffff;
-  --CTA: #001aff;
   --gray: #cecece;
-  /* --active:  */
 }
 
 h1,
@@ -62,27 +60,6 @@ input {
   border: none;
 }
 
-.input-wrapper {
-  background: var(--highlight);
-  width: 15em;
-  height: 2.2em;
-  padding: 6px 11px 6px 11px;
-  border-radius: 4px;
-  display: flex;
-  justify-content: space-between;
-  box-shadow: 0px 2.9822px 24px rgba(139, 168, 255, 0.15);
-}
-
-.input-wrapper input {
-  font-family: "Lato", sans-serif;
-}
-
-.input-wrapper input::placeholder {
-  font-family: "Lato", sans-serif;
-  opacity: 67%;
-  font-size: 14px;
-}
-
 nav {
   position: -webkit-sticky;
   position: sticky;
@@ -121,17 +98,30 @@ nav ul li:nth-child(1) p {
   display: inline-block;
 }
 
-nav ul li:nth-child(2) form div input[type="text"] {
+/* INPUT STYLES */
+nav ul li:nth-child(2) form > div {
+  background: var(--highlight);
+  width: 15em;
+  height: 2.2em;
+  padding: 6px 11px 6px 11px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0px 2.9822px 24px rgba(139, 168, 255, 0.15);
+}
+
+nav ul li:nth-child(2) form > div input[type="text"] {
   background-color: var(--highlight);
   border: none;
   width: 100%;
   color: var(--text);
 }
-nav ul li:nth-child(2) form div input[type="text"]::placeholder {
+nav ul li:nth-child(2) form > div input[type="text"]::placeholder {
   color: var(--text);
   font-family: "Lato", sans-serif;
   font-size: 14px;
   letter-spacing: 0.5px;
+  opacity: 67%;
 }
 
 nav ul li:nth-child(2) form div button {
@@ -144,23 +134,13 @@ nav ul li:nth-child(3) button i {
 }
 
 header {
-  margin-bottom: 3.5em;
+  margin-bottom: 2.5em;
 }
 
 header h1 {
   font-size: 3em;
   text-align: left;
-  margin-bottom: 1;
   margin-top: 1em;
-}
-
-header span {
-  display: block;
-}
-
-header h1 span {
-  color: var(--CTA);
-  font-weight: 700;
 }
 
 /* loading state */
@@ -192,7 +172,7 @@ header h1 span {
   letter-spacing: 0.5%;
   font-weight: 600;
   line-height: 25px;
-  margin-top: 0.7em;
+  margin-bottom: 1.5em;
 }
 
 .articleCard small {
@@ -202,15 +182,6 @@ header h1 span {
 
 .articleCard small i {
   margin-right: 0.5em;
-}
-
-.articleCard small:first-of-type {
-  margin-top: 1.5em;
-  margin-bottom: 0.5em;
-}
-
-.articleCard small:last-of-type {
-  margin-bottom: 1em;
 }
 
 .articleCard img {
@@ -237,6 +208,16 @@ header h1 span {
 
 .articleCard:first-of-type img {
   border-radius: 19px;
+}
+
+.articleCard:first-of-type article {
+  padding: 1em 1.5em 1em 1.5em;
+}
+
+.articleCard:first-of-type article div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 #backbtn {

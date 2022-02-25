@@ -52,13 +52,13 @@ function getData(e) {
         articleContents = `
         <img src="${article.urlToImage}" alt="article banner" width="100%" height="auto"></img>
 
-        <div>
+        <article>
           <h2>${article.title}</h2>
             <div>
             <small><i class="fa-solid fa-calendar-days"></i>${publishedAt}</small>
             <small><i class="fa-solid fa-file-signature"></i> ${article.author}</small>
             </div>
-        </div>
+        </article>
   `;
 
         // <div>
