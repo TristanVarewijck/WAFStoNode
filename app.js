@@ -55,18 +55,19 @@ function getData(e) {
         // FORMATE DATE
         let publishedAt = new Date(article.publishedAt);
         publishedAt = publishedAt.toString().substring(3, 25);
-
-        article.urlToImage ? "./replacementImage" : article.urlToImage;
+        publishedAt = publishedAt.slice(12, 16) + publishedAt.slice(16);
 
         // MAKE CARD
         articleContents = `
         <div style="background-image:url(${
-          article.urlToImage ? article.urlToImage : " "
+          article.urlToImage
+            ? article.urlToImage
+            : "./assets/icons/no-image.svg"
         })"></div>
         <article>
           <h2>${article.title}</h2>
             <div>
-            <small><i class="fa-solid fa-calendar-days"></i>${publishedAt}</small>
+            <small><i class="fa-solid fa-clock"></i>${publishedAt}</small>
             <small><i class="fa-solid fa-file-signature"></i> ${
               article.author ? article.author : "-"
             }</small>
