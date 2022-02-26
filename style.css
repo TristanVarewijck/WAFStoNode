@@ -167,7 +167,32 @@ header h1 {
   color: var(--text);
 }
 
-.articleCard h2 {
+.articleCard {
+  margin-bottom: 1.5em;
+}
+
+.articleCard:not(:first-of-type) {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  border-bottom: solid 0.5px rgba(122, 122, 122, 0.15);
+}
+
+.articleCard:not(:first-of-type) h2 {
+  font-size: 1.2em;
+  font-weight: 500;
+}
+
+.articleCard article {
+  padding: 1em 1.5em 1em 1.5em;
+}
+
+.articleCard article:not(:first-of-type) {
+  padding: 1em 1.5em 1em 1.5em;
+}
+
+.articleCard article h2 {
   font-size: 18px;
   letter-spacing: 0.5%;
   font-weight: 600;
@@ -177,15 +202,19 @@ header h1 {
 
 .articleCard small {
   opacity: 0.67;
-  display: block;
 }
 
 .articleCard small i {
   margin-right: 0.5em;
 }
 
-.articleCard img {
+.articleCard div:first-child {
   border-radius: 4px;
+  min-width: 4.688rem;
+  min-height: 4.688rem;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   box-shadow: 4px 5px 18px rgba(219, 219, 219, 0.15);
 }
 
@@ -194,9 +223,10 @@ header h1 {
   opacity: 0.87;
 }
 
-.articleCard a span {
-  display: block;
-  font-weight: bold;
+.articleCard article div:nth-child(2) {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .articleCard:first-of-type {
@@ -206,12 +236,18 @@ header h1 {
   margin-bottom: 3em;
 }
 
-.articleCard:first-of-type img {
+.articleCard:first-of-type div:first-child {
+  box-shadow: 4px 5px 18px rgba(219, 219, 219, 0.15);
   border-radius: 19px;
+  width: 100%;
+  height: 300px;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .articleCard:first-of-type article {
   padding: 1em 1.5em 1em 1.5em;
+  display: block;
 }
 
 .articleCard:first-of-type article div {

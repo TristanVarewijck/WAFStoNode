@@ -1,14 +1,12 @@
 const apiKey = "c9269540edae44718bb24d0041c75162";
 
 // LOADING STATE
-// selecting loading div
 const loader = document.getElementById("loading");
 
 displayLoading = () => {
   loader.classList.add("display");
 };
 
-// hiding loading
 hideLoading = () => {
   loader.classList.remove("display");
 };
@@ -16,6 +14,16 @@ hideLoading = () => {
 const input = document.getElementById("input");
 const form = document.getElementById("form");
 form.addEventListener("submit", getData);
+
+// const filterButtons = document.querySelectorAll(".filterButton");
+// // for (let i = 0; i < filterButtons.length; i++)
+// //   filterButtons[i]. = clickEvent;
+// for (let i = 0; i < filterButtons.length; i++) {
+//   filterButtons[i].addEventListener("click", function () {
+//     let clickValue = this.value;
+//     getData(clickValue);
+//   });
+// }
 
 function getData(e) {
   displayLoading();
@@ -48,23 +56,23 @@ function getData(e) {
         let publishedAt = new Date(article.publishedAt);
         publishedAt = publishedAt.toString().substring(3, 25);
 
+        article.urlToImage ? "./replacementImage" : article.urlToImage;
+
         // MAKE CARD
         articleContents = `
-        <img src="${article.urlToImage}" alt="article banner" width="100%" height="auto"></img>
-
+        <div style="background-image:url(${
+          article.urlToImage ? article.urlToImage : " "
+        })"></div>
         <article>
           <h2>${article.title}</h2>
             <div>
             <small><i class="fa-solid fa-calendar-days"></i>${publishedAt}</small>
-            <small><i class="fa-solid fa-file-signature"></i> ${article.author}</small>
+            <small><i class="fa-solid fa-file-signature"></i> ${
+              article.author ? article.author : "-"
+            }</small>
             </div>
         </article>
   `;
-
-        // <div>
-        //     <p>${article.content}</p>
-        //     <a href="${article.url}"> <span>Source:</span> ${article.url} </a>
-        // </div>
         const articleCard = document.createElement("li");
         articleCard.className = "articleCard";
         articleCard.innerHTML = articleContents;
@@ -105,14 +113,12 @@ topFunction = () => {
   document.documentElement.scrollTop = 0;
 };
 
-// display current date
-
+// CURRENT DATE
 const datePlaceholder = document.getElementById("currentDate");
 let currentDate = new Date().toLocaleDateString().replaceAll("-", " / ");
 datePlaceholder.innerHTML = currentDate;
 
-// filters
-
+// FILTERS
 const filters = [
   "All",
   "Crypto",
@@ -133,7 +139,8 @@ filters.forEach((filter) => {
   // NEXT ADD BUTTONS
 
   const filterButton = document.createElement("button");
-  filterButton.className = filter;
+  filterButton.className = "filterButton";
+  filterButton.value = filter;
   filterItem.appendChild(filterButton);
   filterButton.innerHTML = filter;
 });
