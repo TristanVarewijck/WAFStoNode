@@ -179,7 +179,7 @@ header h1 {
   transition: margin-bottom 1s ease-in;
 }
 
-.hidden {
+.toTopAnimation {
   margin-bottom: 3em;
 }
 
@@ -345,4 +345,20 @@ header h1 {
 .filterItem button:active::before {
   content: " ";
   width: 15px;
+}
+
+#startScreen {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: var(--background);
+  z-index: 2;
+  transition: 2s ease-out;
+}
+
+.hideScreen {
+  display: none;
+  transition: 2s ease-out;
 }

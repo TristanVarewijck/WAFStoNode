@@ -82,12 +82,12 @@ function getData(e) {
         articleCard.className = "articleCard";
         articleCard.innerHTML = articleContents;
         articlesContainer.appendChild(articleCard);
-        articleCard.classList.add("hidden");
+        articleCard.classList.add("toTopAnimation");
 
         const firstArticle = document.querySelector(
           "#cardsContainer li:first-child"
         );
-        firstArticle.classList.remove("hidden");
+        firstArticle.classList.remove("toTopAnimation");
       });
     })
     .catch((err) => {
@@ -176,10 +176,59 @@ function scanDocument() {
   let allArticles = document.querySelectorAll(
     "#cardsContainer li:not(:first-child)"
   );
-  console.log(allArticles.length);
+
   allArticles.forEach(function (article) {
     if (isVisible(article)) {
-      article.classList.remove("hidden");
+      article.classList.remove("toTopAnimation");
     }
   });
 }
+
+// STARTSCREEN
+const screen = document.getElementById("startScreen");
+function hideScreen() {
+  screen.classList.add("hideScreen");
+  console.log("its now hidden");
+}
+setTimeout(hideScreen, 5000);
+
+// GONE
+
+// setTimeout(2000, hideStartScreen);
+
+// ROUTING
+// function select_tab(id) {
+//   document
+//     .querySelectorAll(".route")
+//     .forEach((item) => item.classList.remove("selected"));
+
+//   document
+//     .querySelectorAll("#" + id)
+//     .forEach((item) => item.classList.add("selected"));
+// }
+
+// function load_content(id) {
+//   console.log("loading content for {" + id + "}");
+//   document.querySelector("#content").innerHTML =
+//     "Content loading for /" + id + "...";
+// }
+
+// function push(event) {
+//   let id = event.target.id;
+//   select_tab(id);
+//   load_content(id);
+//   window.history.pushState({ id }, `${id}`, `/${id}`);
+// }
+
+// window.onload = (event) => {
+//   window["home"].addEventListener("click", (event) => push(event));
+//   window["about"].addEventListener("click", (event) => push(event));
+// };
+
+// window.addEventListener("popstate", (event) => {
+//   let stateID = event.state.id;
+//   console.log("stateID = ", stateID);
+
+//   select_tab(stateID);
+//   load_content(stateID);
+// });
