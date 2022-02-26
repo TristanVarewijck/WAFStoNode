@@ -90,12 +90,12 @@ Viewing these files will give you an idea of how this software is built.
 
 In addition to the features that are now available, there are also additional features that can make the app better. Do you also have ideas let them know in a Pull Request
 
-- [ ] feature 1
-- [x] feature 2
-- [x] feature 3
-- [x] feature 4
-- [ ] feature 5
-- [ ] feature 6
+- [ ] Responsive
+- [x] Detail pages
+- [x] Start-screen
+- [x] Sharing
+- [ ] Animations
+- [ ] -
 
 ## Meta
 

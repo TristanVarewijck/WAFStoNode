@@ -175,7 +175,12 @@ header h1 {
 }
 
 .articleCard {
-  margin-bottom: 1.5em;
+  margin-bottom: 1em;
+  transition: margin-bottom 1s ease-in;
+}
+
+.hidden {
+  margin-bottom: 3em;
 }
 
 .articleCard:not(:first-of-type) {

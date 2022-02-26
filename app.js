@@ -59,11 +59,14 @@ function getData(e) {
 
         // MAKE CARD
         articleContents = `
+        
         <div style="background-image:url(${
           article.urlToImage
             ? article.urlToImage
             : "./assets/icons/no-image.svg"
         })"></div>
+
+
         <article>
           <h2>${article.title}</h2>
             <div>
@@ -73,11 +76,18 @@ function getData(e) {
             }</small>
             </div>
         </article>
+
   `;
         const articleCard = document.createElement("li");
         articleCard.className = "articleCard";
         articleCard.innerHTML = articleContents;
         articlesContainer.appendChild(articleCard);
+        articleCard.classList.add("hidden");
+
+        const firstArticle = document.querySelector(
+          "#cardsContainer li:first-child"
+        );
+        firstArticle.classList.remove("hidden");
       });
     })
     .catch((err) => {
@@ -145,3 +155,31 @@ filters.forEach((filter) => {
   filterItem.appendChild(filterButton);
   filterButton.innerHTML = filter;
 });
+
+// article ROW animation
+const heading = document.querySelector("h1");
+console.log(heading.getBoundingClientRect());
+
+function isVisible(element) {
+  let elementBox = element.getBoundingClientRect();
+  let distanceFromTop = -100;
+
+  if (elementBox.top - window.innerHeight < distanceFromTop) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+document.addEventListener("scroll", scanDocument);
+function scanDocument() {
+  let allArticles = document.querySelectorAll(
+    "#cardsContainer li:not(:first-child)"
+  );
+  console.log(allArticles.length);
+  allArticles.forEach(function (article) {
+    if (isVisible(article)) {
+      article.classList.remove("hidden");
+    }
+  });
+}
