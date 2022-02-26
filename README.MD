@@ -63,6 +63,14 @@ API_URL='https://api.coingecko.com/api/v3/coins/markets?vs_currency=eur&order=ma
 
 ## API
 
+For this project i am using the news api from - [newsapi](https://newsapi.org/)
+
+The end-points that i am using are:
+`https://newsapi.org/v2/everything`
+`https://newsapi.org/v2/headlines`
+
+The first one is so i can search for specifics topics and the other one is so i can see the latest headlines.
+
 ## !mportant files
 
 Of course all files are important but you should at least have a look at these files if you are interested in this repo.
