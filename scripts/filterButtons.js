@@ -1,3 +1,4 @@
+const filtersContainer = document.getElementById("filtersContainer");
 const filters = [
   "All",
   "Crypto",
@@ -8,7 +9,6 @@ const filters = [
   "Metaverse",
   "Jeff Bezos",
 ];
-const filtersContainer = document.getElementById("filtersContainer");
 
 function addFilters() {
   filters.forEach((filter) => {

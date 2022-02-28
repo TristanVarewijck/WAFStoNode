@@ -1,10 +1,8 @@
-// const elementBox = document.querySelector("h1");
+document.addEventListener("scroll", scanDocument);
 
 function isVisible(element) {
   let elementBox = element.getBoundingClientRect();
   let distanceFromTop = -100;
-
-  console.log(elementBox);
 
   if (elementBox.top - window.innerHeight < distanceFromTop) {
     return true;
@@ -13,7 +11,6 @@ function isVisible(element) {
   }
 }
 
-document.addEventListener("scroll", scanDocument);
 function scanDocument() {
   let allArticles = document.querySelectorAll(
     "#cardsContainer li:not(:first-child)"
