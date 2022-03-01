@@ -12,50 +12,58 @@
     <script src="./scripts/routie.js"></script>
   </head>
   <body>
-    <nav id="navbar">
-      <ul>
-        <li>
-          <a href="/#landing">
-            <img
-              src="./assets/logo/TechDefined-icon.svg"
-              alt="TechDefined-logo.svg"
-            />
-          </a>
-          <!-- current date -->
-          <p id="currentDate">02 Mar 2022</p>
-        </li>
-
-        <li>
-          <form id="form" style="max-width: 450px; margin: auto">
-            <div class="input-wrapper">
-              <input id="input" type="text" placeholder="search for a topic" />
-              <button type="submit">
-                <img
-                  src="./assets/icons/search-icon.svg"
-                  alt="search-icon"
-                  width="26px"
-                />
-              </button>
-            </div>
-          </form>
-        </li>
-      </ul>
-    </nav>
-
-    <header>
+    <!-- <header>
       <ul id="filtersContainer"></ul>
-    </header>
+    </header> -->
 
     <main data-route="landing">
-      <h1>Breaking News</h1>
-      <!-- lOADING -->
-      <section id="loading">
-        <i class="fas fa-spinner"></i>
-        <p>Searching for the latest Articles</p>
-      </section>
-      <!-- OUTPUT -->
-      <section>
-        <ul id="cardsContainer"></ul>
+      <nav id="navbar">
+        <ul>
+          <li>
+            <a href="/#landing">
+              <img
+                src="./assets/logo/TechDefined-icon.svg"
+                alt="TechDefined-logo.svg"
+              />
+            </a>
+            <!-- current date -->
+            <p id="currentDate">02 Mar 2022</p>
+          </li>
+
+          <li>
+            <form id="form" style="max-width: 450px; margin: auto">
+              <div class="input-wrapper">
+                <input
+                  id="input"
+                  type="text"
+                  placeholder="search for a topic"
+                />
+                <button type="submit">
+                  <img
+                    src="./assets/icons/search-icon.svg"
+                    alt="search-icon"
+                    width="26px"
+                  />
+                </button>
+              </div>
+            </form>
+          </li>
+        </ul>
+      </nav>
+
+      <section class="content">
+        <ul id="filtersContainer"></ul>
+
+        <h1>Breaking News</h1>
+        <!-- lOADING -->
+        <section id="loading">
+          <i class="fas fa-spinner"></i>
+          <p>Searching for the latest Articles</p>
+        </section>
+        <!-- OUTPUT -->
+        <section>
+          <ul id="cardsContainer"></ul>
+        </section>
       </section>
     </main>
 
@@ -66,7 +74,20 @@
 
     <!-- TEMPLATE PAGE -->
     <main data-route="template">
-      <h1>hello world!</h1>
+      <nav id="navbar">
+        <ul>
+          <li>
+            <a href="#landing"></a>
+          </li>
+
+          <li>
+            <a href="https://twitter.com/intent/tweet" target="_blank"></a>
+          </li>
+        </ul>
+      </nav>
+      <section class="content">
+        <h1>yooo</h1>
+      </section>
     </main>
 
     <main data-route="error">

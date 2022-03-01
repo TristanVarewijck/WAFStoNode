@@ -23,12 +23,12 @@ document.addEventListener("scroll", scanDocument); // call article animation
 // Routes
 routie({
   "article/:id": (id) => {
+    console.log(id);
     updateUI("template");
   },
   landing: () => {
     updateUI("landing");
   },
-
   error: () => {
     updateUI("error");
   },

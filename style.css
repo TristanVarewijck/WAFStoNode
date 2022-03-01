@@ -28,6 +28,16 @@ h6 {
   margin: 0;
 }
 
+.content a {
+  text-decoration: none;
+  color: var(--text);
+}
+.content a:hover,
+a:visited {
+  color: #2134e4;
+  transition: 0.2s ease-in-out;
+}
+
 body {
   background-color: var(--background);
   font-family: "Lato", sans-serif;
@@ -36,7 +46,7 @@ body {
   margin: 0;
 }
 
-main {
+.content {
   margin: 0 16px 0 16px;
 }
 
@@ -88,29 +98,29 @@ nav ul {
   padding: 0 0.75em 0 0.75em;
 }
 
-nav ul li:nth-child(1) {
+main[data-route="landing"] nav ul li:nth-child(1) {
   display: flex;
   align-items: center;
 }
 
-nav ul li:nth-child(1) img {
+main[data-route="landing"] nav ul li:nth-child(1) img {
   width: 30px;
   height: auto;
   margin-right: 1em;
 }
 
-nav ul li:nth-child(1) img:hover {
+main[data-route="landing"] nav ul li:nth-child(1) img:hover {
   animation: spin 0.5s;
 }
 
-nav ul li:nth-child(1) p {
+main[data-route="landing"] nav ul li:nth-child(1) p {
   font-size: 14px;
   opacity: 67%;
   display: inline-block;
 }
 
 /* INPUT STYLES */
-nav ul li:nth-child(2) form > div {
+main[data-route="landing"] nav ul li:nth-child(2) form > div {
   background: var(--highlight);
   width: 15em;
   height: 2.2em;
@@ -121,13 +131,13 @@ nav ul li:nth-child(2) form > div {
   box-shadow: 0px 2.9822px 24px rgba(139, 168, 255, 0.15);
 }
 
-nav ul li:nth-child(2) form > div input[type="text"] {
+main[data-route="landing"] nav ul li:nth-child(2) form > div input[type="text"] {
   background-color: var(--highlight);
   border: none;
   width: 100%;
   color: var(--text);
 }
-nav ul li:nth-child(2) form > div input[type="text"]::placeholder {
+main[data-route="landing"] nav ul li:nth-child(2) form > div input[type="text"]::placeholder {
   color: var(--text);
   font-family: "Lato", sans-serif;
   font-size: 14px;
@@ -135,23 +145,20 @@ nav ul li:nth-child(2) form > div input[type="text"]::placeholder {
   opacity: 67%;
 }
 
-nav ul li:nth-child(2) form div button {
+main[data-route="landing"] nav ul li:nth-child(2) form div button {
   background-color: var(--highlight);
   border: none;
 }
 
-nav ul li:nth-child(3) button i {
+main[data-route="landing"] nav ul li:nth-child(3) button i {
   font-size: 20px;
 }
 
-header {
-  margin-bottom: 2.5em;
-}
-
-header h1 {
-  font-size: 3em;
+section h1 {
+  font-size: 2.4em;
   text-align: left;
-  margin-top: 1em;
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
 }
 
 /* loading state */
@@ -432,4 +439,34 @@ header h1 {
 
 .disabled {
   display: none;
+}
+
+/* TEMPLATE PAGE */
+
+main[data-route="template"] nav ul li a {
+  background: var(--highlight);
+  text-decoration: none;
+  color: var(--text);
+  box-shadow: 0px 2.418px 19.4595px rgba(139, 168, 255, 0.15);
+  width: 3em;
+  height: 3em;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: inherit;
+}
+
+main:nth-of-type(2) nav ul li a:first-of-type {
+  background-image: url("./assets/icons/arrowBack.svg");
+}
+
+main:nth-of-type(2) nav ul li:last-of-type a {
+  background-image: url("./assets/icons/share.svg");
+}
+
+main[data-route="template"] nav ul li a:hover {
+  box-shadow: none;
+  transition: 0.2s ease-in;
 }
