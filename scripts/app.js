@@ -4,25 +4,49 @@ import { scanDocument } from "./articleAnimation.js";
 import { addFilters } from "./filterButtons.js";
 import { parseDate } from "./parseCurrentDate.js";
 import { scrollToTop } from "./toTopButton.js";
+import { apiKey } from "./apiProvider.js";
 
 // variables
-const apiKey = "c9269540edae44718bb24d0041c75162";
 const input = document.getElementById("input");
 const form = document.getElementById("form");
 const articlesContainer = document.getElementById("cardsContainer");
 const mybutton = document.getElementById("toTopButton");
 const navbar = document.getElementById("navbar");
-const showTemplate = document.querySelector("main.template");
-const hidepages = document.querySelector("main");
+const mains = document.querySelectorAll("main");
 let prevScrollpos = window.scrollY;
 
-// eventlisteners
+// Eventlisteners
 form.addEventListener("submit", getData); // form submit
 mybutton.addEventListener("click", scrollToTop); // to top button call
 document.addEventListener("scroll", scanDocument); // call article animation
 
-// functions
+// Routes
+routie({
+  "article/:id": (id) => {
+    updateUI("template");
+  },
+  landing: () => {
+    updateUI("landing");
+  },
+
+  error: () => {
+    updateUI("error");
+  },
+});
+
+// Update UI for pages
+function updateUI(route) {
+  mains.forEach((main) => {
+    main.classList.add("disabled");
+  });
+  let activeMain = document.querySelector(`[data-route=${route}]`);
+  console.log(activeMain);
+  activeMain.classList.remove("disabled");
+}
+
+// Function
 function getData(e) {
+  // Show loading state
   displayLoading();
 
   if (input.value) {
@@ -42,18 +66,22 @@ function getData(e) {
       return response.json();
     })
     .then((myJson) => {
+      // Hide loading state
       hideLoading();
       let articles = myJson.articles;
       return articles;
     })
     .then((articles) => {
+      console.log(articles);
+      // Function
       articles.map((article) => {
+        // Function
         let publishedAt = new Date(article.publishedAt);
         publishedAt = publishedAt.toString().substring(3, 25);
         publishedAt = publishedAt.slice(12, 16) + publishedAt.slice(16);
 
+        article.id = `${Math.floor(Math.random() * 100)}`;
         const articleContents = `
-        
         <div style="background-image:url(${
           article.urlToImage
             ? article.urlToImage
@@ -61,7 +89,9 @@ function getData(e) {
         })"></div>
 
         <article>
+        <a href=#article/${article.id}>
           <h2>${article.title}</h2>
+          </a>
             <div>
             <small><i class="fa-solid fa-clock"></i>${publishedAt}</small>
             <small><i class="fa-solid fa-file-signature"></i> ${
@@ -69,6 +99,7 @@ function getData(e) {
             }</small>
             </div>
         </article>
+        
   `;
         const articleCard = document.createElement("li");
         articleCard.className = "articleCard";
@@ -104,21 +135,8 @@ window.onscroll = () => {
 // Scroll top top behaviour
 scrollToTop();
 
-// current date
+// Current date
 parseDate();
 
-// call filters
+// Call filters
 addFilters();
-
-// #hash routing:
-// home
-routie("", function () {
-  showTemplate.style.display = "none";
-  hidepages.style.display = "block";
-});
-
-// template
-routie(":name", function (name) {
-  hidepages.style.display = "none";
-  showTemplate.style.display = "block";
-});

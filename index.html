@@ -12,20 +12,10 @@
     <script src="./scripts/routie.js"></script>
   </head>
   <body>
-    <a href="">Root</a>
-    <a href="#:bob">Show</a>
-    <!-- <section id="root">
-      <section class="route" id="home">hello world!</section>
-      <section class="route" id="about">/about</section>
-    </section>
-
-    <main id="content">Content loading...</main> -->
-
-    <!-- <section id="startScreen">WELCOME!!!</section> -->
     <nav id="navbar">
       <ul>
         <li>
-          <a href="/">
+          <a href="/#landing">
             <img
               src="./assets/logo/TechDefined-icon.svg"
               alt="TechDefined-logo.svg"
@@ -52,37 +42,35 @@
       </ul>
     </nav>
 
-    <main class="home">
-      <!-- FILTER OPTIONS -->
+    <header>
       <ul id="filtersContainer"></ul>
-      <header>
-        <!-- generated from input -->
-        <h1>Breaking News</h1>
-      </header>
+    </header>
 
-      <!-- COMMON TOPICS  -->
-
+    <main data-route="landing">
+      <h1>Breaking News</h1>
       <!-- lOADING -->
       <section id="loading">
         <i class="fas fa-spinner"></i>
         <p>Searching for the latest Articles</p>
       </section>
-
       <!-- OUTPUT -->
       <section>
         <ul id="cardsContainer"></ul>
       </section>
-
-      <!-- TO TOP BUTTON -->
-      <button id="toTopButton" title="Go to top">
-        <i class="fa-solid fa-arrow-up"></i>
-      </button>
     </main>
 
-    <!-- TEMPLATE PAGE -->
+    <!-- scroll button -->
+    <button id="toTopButton" title="Go to top">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
 
-    <main class="template">
+    <!-- TEMPLATE PAGE -->
+    <main data-route="template">
       <h1>hello world!</h1>
+    </main>
+
+    <main data-route="error">
+      <h1>this is an error</h1>
     </main>
 
     <script src="scripts/app.js" type="module"></script>

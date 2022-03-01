@@ -425,3 +425,11 @@ header h1 {
     display: block;
   }
 }
+
+.active {
+  display: block;
+}
+
+.disabled {
+  display: none;
+}
