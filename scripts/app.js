@@ -5,6 +5,7 @@ import { addFilters } from "./filterButtons.js";
 import { parseDate } from "./parseCurrentDate.js";
 import { scrollToTop } from "./toTopButton.js";
 import { apiKey } from "./apiProvider.js";
+import { imageObserver } from "./imageObserver.js";
 
 // variables
 const input = document.getElementById("input");
@@ -23,7 +24,6 @@ document.addEventListener("scroll", scanDocument); // call article animation
 // Routes
 routie({
   "article/:id": (id) => {
-    console.log(id);
     updateUI("template");
   },
   landing: () => {
@@ -34,13 +34,12 @@ routie({
   },
 });
 
-// Update UI for pages
+// Update UIfor pages
 function updateUI(route) {
   mains.forEach((main) => {
     main.classList.add("disabled");
   });
   let activeMain = document.querySelector(`[data-route=${route}]`);
-  console.log(activeMain);
   activeMain.classList.remove("disabled");
 }
 
@@ -59,7 +58,7 @@ function getData(e) {
 
   fetch(
     input.value
-      ? `https://newsapi.org/v2/everything?q=${input.value}&from=2022-02-15&sortBy=publishedAt&language=en&apiKey=${apiKey}`
+      ? `https://newsapi.org/v2/everything?q=${input.value}&from=2022-02-15&sortBy=publishedAt&language=en&pageSize=100&apiKey=${apiKey}`
       : "/test.json"
   )
     .then((response) => {
@@ -72,7 +71,6 @@ function getData(e) {
       return articles;
     })
     .then((articles) => {
-      console.log(articles);
       // Function
       articles.map((article) => {
         // Function
@@ -80,16 +78,21 @@ function getData(e) {
         publishedAt = publishedAt.toString().substring(3, 25);
         publishedAt = publishedAt.slice(12, 16) + publishedAt.slice(16);
 
-        article.id = `${Math.floor(Math.random() * 100)}`;
+        for (let i = 0; i < articles.length; i++) {
+          articles.forEach((article) => {
+            article.id = i++;
+          });
+        }
+
         const articleContents = `
-        <div style="background-image:url(${
+        <div class="bgImage" style="background-image:url(${
           article.urlToImage
             ? article.urlToImage
             : "./assets/icons/no-image.svg"
         })"></div>
 
         <article>
-        <a href=#article/${article.id}>
+        <a href=#article/${article.id} onclick="detailArticle()">
           <h2>${article.title}</h2>
           </a>
             <div>
@@ -112,12 +115,50 @@ function getData(e) {
         );
         firstArticle.classList.remove("toTopAnimation");
       });
+
+      // config for observer
+      const images = document.querySelectorAll(
+        ".articleCard:not(:first-of-type) > div"
+      );
+      imageObserver(images);
+
+      return articles;
     })
     .catch((err) => {
       console.log(err);
     });
 }
 window.onload = getData();
+
+const SpeechSynthesisUtterance =
+  window.webkitSpeechSynthesisUtterance ||
+  window.mozSpeechSynthesisUtterance ||
+  window.msSpeechSynthesisUtterance ||
+  window.oSpeechSynthesisUtterance ||
+  window.SpeechSynthesisUtterance;
+
+let voices;
+
+const speechForm = document.getElementById("speechForm"),
+  voiceInput = document.getElementById("voiceInput");
+
+voiceInput.value =
+  "Price: The 2022 Ford Expedition starts at $51,080.The 2022 Ford Expedition full-size SUV can seat up to eight, hit the highway, and go off-road. Its a roomy and versatile vehicle, and the longer Max";
+
+// check browser support
+if (SpeechSynthesisUtterance !== undefined) {
+  console.log("supported");
+} else {
+  console.log("not supported");
+}
+
+speechForm.onsubmit = function (event) {
+  event.preventDefault();
+
+  let utterance = new SpeechSynthesisUtterance(voiceInput.value);
+  utterance.lang = "eng-GB";
+  window.speechSynthesis.speak(utterance);
+};
 
 // onScroll behaviours
 window.onscroll = () => {
