@@ -90,12 +90,13 @@ Viewing these files will give you an idea of how this software is built.
 
 In addition to the features that are now available, there are also additional features that can make the app better. Do you also have ideas let them know in a Pull Request
 
-- [ ] Responsive
-- [x] Detail pages
-- [x] Start-screen
-- [x] Sharing
-- [ ] Animations
-- [ ] -
+- [ ]
+- [ ] Detail pages
+- [ ] detail page - placeholder content
+- [ ] screen switch animation
+- [x] fix - animation
+- [ ] (locomotive scroll testing)
+- [ ] filter buttons make it working
 
 ## Meta
 

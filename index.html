@@ -89,9 +89,14 @@
         <h1>yooo</h1>
 
         <form id="speechForm">
-          <!-- <select name="voiceSelect" id="voiceSelect"></select> -->
-          <input type="text" id="voiceInput" placeholder="hello" readonly />
-          <button type="submit">SPEAK</button>
+          <p role="textbox" id="textInput" readonly></p>
+          <button id="speechButton" type="submit">
+            <i class="fa-solid fa-headphones"></i>
+          </button>
+
+          <button id="cancelButton" class="hidden" type="button">
+            <i class="fa-solid fa-stop"></i>
+          </button>
         </form>
       </section>
     </main>

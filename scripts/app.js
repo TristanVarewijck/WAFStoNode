@@ -1,11 +1,10 @@
 // imports
 import { displayLoading, hideLoading } from "./loader.js";
-import { scanDocument } from "./articleAnimation.js";
 import { addFilters } from "./filterButtons.js";
 import { parseDate } from "./parseCurrentDate.js";
 import { scrollToTop } from "./toTopButton.js";
 import { apiKey } from "./apiProvider.js";
-import { imageObserver } from "./imageObserver.js";
+import { articleObserver } from "./articleObserver.js";
 
 // variables
 const input = document.getElementById("input");
@@ -14,12 +13,17 @@ const articlesContainer = document.getElementById("cardsContainer");
 const mybutton = document.getElementById("toTopButton");
 const navbar = document.getElementById("navbar");
 const mains = document.querySelectorAll("main");
+const speechForm = document.getElementById("speechForm"),
+  textInput = document.getElementById("textInput"),
+  speakButton = document.getElementById("speechButton"),
+  cancelButton = document.getElementById("cancelButton");
+
 let prevScrollpos = window.scrollY;
 
 // Eventlisteners
 form.addEventListener("submit", getData); // form submit
 mybutton.addEventListener("click", scrollToTop); // to top button call
-document.addEventListener("scroll", scanDocument); // call article animation
+// document.addEventListener("scroll", scanDocument); // call article animation
 
 // Routes
 routie({
@@ -108,19 +112,13 @@ function getData(e) {
         articleCard.className = "articleCard";
         articleCard.innerHTML = articleContents;
         articlesContainer.appendChild(articleCard);
-        articleCard.classList.add("toTopAnimation");
-
-        const firstArticle = document.querySelector(
-          "#cardsContainer li:first-child"
-        );
-        firstArticle.classList.remove("toTopAnimation");
       });
 
       // config for observer
-      const images = document.querySelectorAll(
-        ".articleCard:not(:first-of-type) > div"
+      const articlesToObserve = document.querySelectorAll(
+        ".articleCard:not(:first-of-type)"
       );
-      imageObserver(images);
+      articleObserver(articlesToObserve);
 
       return articles;
     })
@@ -130,20 +128,13 @@ function getData(e) {
 }
 window.onload = getData();
 
+// browsers
 const SpeechSynthesisUtterance =
   window.webkitSpeechSynthesisUtterance ||
   window.mozSpeechSynthesisUtterance ||
   window.msSpeechSynthesisUtterance ||
   window.oSpeechSynthesisUtterance ||
   window.SpeechSynthesisUtterance;
-
-let voices;
-
-const speechForm = document.getElementById("speechForm"),
-  voiceInput = document.getElementById("voiceInput");
-
-voiceInput.value =
-  "Price: The 2022 Ford Expedition starts at $51,080.The 2022 Ford Expedition full-size SUV can seat up to eight, hit the highway, and go off-road. Its a roomy and versatile vehicle, and the longer Max";
 
 // check browser support
 if (SpeechSynthesisUtterance !== undefined) {
@@ -152,12 +143,49 @@ if (SpeechSynthesisUtterance !== undefined) {
   console.log("not supported");
 }
 
+const settings = {
+  lang: "en-GB",
+  pitch: 1,
+  rate: 1.05,
+  volume: 0.7,
+};
+
+// get the api
+let synth = window.speechSynthesis;
+
+// text input
+textInput.innerHTML =
+  "My BBC Africa colleagues and I have been intimidated by ultra football fans in Przemyśl, in southern Poland, where we have been reporting on those fleeing the conflict in Ukraine. We had been hearing over the last few days that they had come into the city to protect it from African and Asian refugees crossing over from Ukraine";
+
+// speak on submit
 speechForm.onsubmit = function (event) {
   event.preventDefault();
 
-  let utterance = new SpeechSynthesisUtterance(voiceInput.value);
-  utterance.lang = "eng-GB";
-  window.speechSynthesis.speak(utterance);
+  cancelButton.addEventListener("click", function () {
+    synth.cancel();
+  });
+
+  // text to speak >> textInput (new utterance of nieuwe uiting)
+  let utterance = new SpeechSynthesisUtterance(textInput.innerHTML);
+  // voice settings
+  utterance.lang = settings.lang;
+  utterance.pitch = settings.pitch;
+  utterance.rate = settings.rate;
+  utterance.volume = settings.volume;
+  // actually speak the utterance
+  synth.speak(utterance);
+
+  // add class when speaking
+  utterance.addEventListener("start", function () {
+    speakButton.classList.add("speaking");
+    cancelButton.classList.remove("hidden");
+  });
+
+  // remove class when speaking
+  utterance.addEventListener("end", function () {
+    speakButton.classList.remove("speaking");
+    cancelButton.classList.add("hidden");
+  });
 };
 
 // onScroll behaviours

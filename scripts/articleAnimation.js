@@ -23,4 +23,11 @@ function scanDocument() {
   });
 }
 
-export { scanDocument };
+// export { scanDocument };
+
+// articleCard.classList.add("toTopAnimation");
+
+// const firstArticle = document.querySelector(
+//   "#cardsContainer li:first-child"
+// );
+// firstArticle.classList.remove("toTopAnimation");
