@@ -1,4 +1,6 @@
-const loader = document.getElementById("loading");
+const loader = document.querySelector(
+  "main:first-of-type > section section:first-of-type"
+);
 function displayLoading() {
   loader.classList.add("display");
 }

@@ -7,13 +7,13 @@ import { apiKey } from "./apiProvider.js";
 import { articleObserver } from "./articleObserver.js";
 
 // variables
-const input = document.getElementById("input");
-const form = document.getElementById("form");
+const input = document.querySelector("#searchForm input");
+const form = document.getElementById("searchForm");
 const articlesContainer = document.querySelector(
   "main:first-of-type section section:last-of-type ul"
 );
-const mybutton = document.getElementById("toTopButton");
-const navbar = document.querySelector("nav");
+const mybutton = document.querySelector("body > button");
+const navbar = document.querySelectorAll("nav");
 const mains = document.querySelectorAll("main");
 const speechForm = document.getElementById("speechForm"),
   textInput = document.getElementById("textInput"),
@@ -194,9 +194,13 @@ window.onscroll = () => {
     : (mybutton.style.display = "none");
 
   let currentScrollPos = window.scrollY;
-  prevScrollpos > currentScrollPos
-    ? (navbar.style.top = "0")
-    : (navbar.style.top = "-75px");
+
+  navbar.forEach((nav) => {
+    prevScrollpos > currentScrollPos
+      ? (nav.style.top = "0")
+      : (nav.style.top = "-75px");
+  });
+
   prevScrollpos = currentScrollPos;
 };
 
