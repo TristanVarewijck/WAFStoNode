@@ -9,9 +9,11 @@ import { articleObserver } from "./articleObserver.js";
 // variables
 const input = document.getElementById("input");
 const form = document.getElementById("form");
-const articlesContainer = document.getElementById("cardsContainer");
+const articlesContainer = document.querySelector(
+  "main:first-of-type section section:last-of-type ul"
+);
 const mybutton = document.getElementById("toTopButton");
-const navbar = document.getElementById("navbar");
+const navbar = document.querySelector("nav");
 const mains = document.querySelectorAll("main");
 const speechForm = document.getElementById("speechForm"),
   textInput = document.getElementById("textInput"),

@@ -97,8 +97,7 @@ In addition to the features that are now available, there are also additional fe
 - [x] fix - animation
 - [ ] (locomotive scroll testing)
 - [ ] filter buttons make it working
-- [ ] branded loading page
-- [ ] css refactoring
+- [x] css refactoring
 - [ ] js refactoring
 - [ ] keep scroll position
 

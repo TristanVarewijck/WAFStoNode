@@ -1,4 +1,6 @@
-const filtersContainer = document.getElementById("filtersContainer");
+const filtersContainer = document.querySelector(
+  "main:first-of-type > section > ul"
+);
 const filters = [
   "All",
   "Crypto",
