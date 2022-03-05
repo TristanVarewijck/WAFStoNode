@@ -7,7 +7,6 @@ import { apiKey } from "./apiProvider.js";
 import { articleObserver } from "./articleObserver.js";
 
 // variables
-const body = document.body;
 const input = document.getElementById("input");
 const form = document.getElementById("form");
 const articlesContainer = document.getElementById("cardsContainer");
@@ -45,7 +44,7 @@ routie({
   "article/:id": (id) => {
     updateUI("template");
   },
-  landing: () => {
+  " ": () => {
     updateUI("landing");
     synth.cancel();
   },

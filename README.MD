@@ -99,6 +99,7 @@ In addition to the features that are now available, there are also additional fe
 - [ ] filter buttons make it working
 - [ ] branded loading page
 - [ ] css refactoring
+- [ ] js refactoring
 - [ ] keep scroll position
 
 ## Meta
