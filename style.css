@@ -14,10 +14,6 @@
   --gray: #cecece;
 }
 
-.hidden {
-  opacity: 0;
-}
-
 .observed {
   opacity: 1;
   transition: opacity 2s ease-in;
@@ -31,6 +27,14 @@ h5,
 h6 {
   font-family: "Noto Sans", sans-serif;
   margin: 0;
+}
+
+h2 {
+  font-size: 1.2em;
+  letter-spacing: 0.5%;
+  font-weight: 500;
+  line-height: 25px;
+  margin-bottom: 1.5em;
 }
 
 .content a {
@@ -90,7 +94,7 @@ nav {
   height: 75px;
   background-color: var(--background);
   transition: top 0.2s;
-  z-index: 1;
+  z-index: 99;
 }
 
 nav ul {
@@ -225,19 +229,11 @@ section h1 {
   width: 100%;
 }
 
-.articleCard article h2 {
-  font-size: 1.2em;
-  letter-spacing: 0.5%;
-  font-weight: 500;
-  line-height: 25px;
-  margin-bottom: 1.5em;
-}
-
-.articleCard small {
+small {
   opacity: 0.67;
 }
 
-.articleCard small i {
+small i {
   margin-right: 0.5em;
 }
 
@@ -269,7 +265,8 @@ section h1 {
   margin-bottom: 3em;
 }
 
-.articleCard:first-of-type div:first-child {
+.articleCard:first-of-type div:first-child,
+main[data-route="template"] section > div:first-of-type {
   box-shadow: 4px 5px 18px rgba(219, 219, 219, 0.15);
   border-radius: 19px;
   width: 100%;
@@ -441,15 +438,29 @@ section h1 {
   }
 }
 
-.active {
-  display: block;
-}
-
+/* SWITCH BETWEEN PAGES  */
 .disabled {
   display: none;
 }
 
+.noScroll {
+  overflow: hidden;
+}
+
 /* TEMPLATE PAGE */
+main[data-route="template"] {
+  /* transform: translateX(-100%); */
+  animation: slideIn 0.5s ease-in-out;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
 
 main[data-route="template"] nav ul li a {
   background: var(--highlight);
@@ -466,30 +477,35 @@ main[data-route="template"] nav ul li a {
   background-size: inherit;
 }
 
-main[data-route="template"] form p {
+main[data-route="template"] p {
   opacity: 0.87;
+  font-weight: normal;
   line-height: auto;
+  line-height: 1.45;
+  text-align: justify;
 }
 
-main[data-route="template"] form button {
+main[data-route="template"] button {
   background-color: none;
   cursor: pointer;
-  width: 50px;
-  height: 50px;
-  transition: 0.2s ease-in-out;
+  width: 40px;
+  height: 40px;
   font-size: 16px;
   color: var(--text);
-  border: none;
-  border-radius: 50%;
+  opacity: 0.87;
 }
 
 .speaking {
   background: -webkit-linear-gradient(225deg, #331dbe 16.67%, #2134e4 82.29%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  /* border: 0.5px solid rgba(139, 168, 255, 0.4); */
   border-radius: 50%;
+  opacity: 1;
   animation: talking 1.2s infinite;
+}
+
+.hidden {
+  display: none;
 }
 
 @keyframes talking {
@@ -515,4 +531,24 @@ main[data-route="template"] nav ul li:last-of-type a {
 main[data-route="template"] nav ul li a:hover {
   box-shadow: none;
   transition: 0.2s ease-in;
+}
+
+main[data-route="template"] section > div:first-of-type {
+  background-image: url("./assets/images/concept-display.png");
+  margin-top: 2.2em;
+}
+
+main[data-route="template"] section h2 {
+  margin-top: 1em;
+  margin-bottom: 0.7em;
+  font-weight: 500;
+  font-size: 1.6em;
+  line-height: 1.25;
+}
+
+main[data-route="template"] section div:nth-of-type(2) {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5em;
 }

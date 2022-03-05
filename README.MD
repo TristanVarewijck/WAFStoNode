@@ -92,11 +92,14 @@ In addition to the features that are now available, there are also additional fe
 
 - [ ]
 - [ ] Detail pages
-- [ ] detail page - placeholder content
-- [ ] screen switch animation
+- [x] detail page - placeholder content
+- [x] screen switch animation
 - [x] fix - animation
 - [ ] (locomotive scroll testing)
 - [ ] filter buttons make it working
+- [ ] branded loading page
+- [ ] css refactoring
+- [ ] keep scroll position
 
 ## Meta
 

@@ -7,6 +7,7 @@ import { apiKey } from "./apiProvider.js";
 import { articleObserver } from "./articleObserver.js";
 
 // variables
+const body = document.body;
 const input = document.getElementById("input");
 const form = document.getElementById("form");
 const articlesContainer = document.getElementById("cardsContainer");
@@ -17,7 +18,21 @@ const speechForm = document.getElementById("speechForm"),
   textInput = document.getElementById("textInput"),
   speakButton = document.getElementById("speechButton"),
   cancelButton = document.getElementById("cancelButton");
-
+// get the api
+let synth = window.speechSynthesis;
+const speechSettings = {
+  lang: "en-GB",
+  pitch: 1,
+  rate: 1.05,
+  volume: 0.7,
+};
+// browsers
+const SpeechSynthesisUtterance =
+  window.webkitSpeechSynthesisUtterance ||
+  window.mozSpeechSynthesisUtterance ||
+  window.msSpeechSynthesisUtterance ||
+  window.oSpeechSynthesisUtterance ||
+  window.SpeechSynthesisUtterance;
 let prevScrollpos = window.scrollY;
 
 // Eventlisteners
@@ -32,9 +47,11 @@ routie({
   },
   landing: () => {
     updateUI("landing");
+    synth.cancel();
   },
   error: () => {
     updateUI("error");
+    synth.cancel();
   },
 });
 
@@ -128,14 +145,6 @@ function getData(e) {
 }
 window.onload = getData();
 
-// browsers
-const SpeechSynthesisUtterance =
-  window.webkitSpeechSynthesisUtterance ||
-  window.mozSpeechSynthesisUtterance ||
-  window.msSpeechSynthesisUtterance ||
-  window.oSpeechSynthesisUtterance ||
-  window.SpeechSynthesisUtterance;
-
 // check browser support
 if (SpeechSynthesisUtterance !== undefined) {
   console.log("supported");
@@ -143,20 +152,9 @@ if (SpeechSynthesisUtterance !== undefined) {
   console.log("not supported");
 }
 
-const settings = {
-  lang: "en-GB",
-  pitch: 1,
-  rate: 1.05,
-  volume: 0.7,
-};
-
-// get the api
-let synth = window.speechSynthesis;
-
 // text input
 textInput.innerHTML =
-  "My BBC Africa colleagues and I have been intimidated by ultra football fans in Przemyśl, in southern Poland, where we have been reporting on those fleeing the conflict in Ukraine. We had been hearing over the last few days that they had come into the city to protect it from African and Asian refugees crossing over from Ukraine";
-
+  "The number of refugees fleeing the war in Ukraine could soon exceed 1.5m people, according to the UN refugee agency (UNHCR).This is the fastest moving refugee crisis we have seen in Europe since the end of World War Two, the UNHCR's head told Reuters news agency Around 1.3m people have already fled their homes since the invasion began. Poland is said to have taken in over half of all the refugees so far, according to the country's president. The number is also high in countries like Hungary and Romania. But not all refugees are choosing to stay in the countries they first arrive in. Take Romania for instance. Of the 200,000 people who travelled there in the first eight days of the war, 140,000 then left to travel onto other countries, leaving around 60,000 in Romania, according to the UNHCR. Countries bordering Ukraine are therefore acting as the first stop for many people fleeing the war, as they travel onto other European countries further away.";
 // speak on submit
 speechForm.onsubmit = function (event) {
   event.preventDefault();
@@ -168,10 +166,10 @@ speechForm.onsubmit = function (event) {
   // text to speak >> textInput (new utterance of nieuwe uiting)
   let utterance = new SpeechSynthesisUtterance(textInput.innerHTML);
   // voice settings
-  utterance.lang = settings.lang;
-  utterance.pitch = settings.pitch;
-  utterance.rate = settings.rate;
-  utterance.volume = settings.volume;
+  utterance.lang = speechSettings.lang;
+  utterance.pitch = speechSettings.pitch;
+  utterance.rate = speechSettings.rate;
+  utterance.volume = speechSettings.volume;
   // actually speak the utterance
   synth.speak(utterance);
 
