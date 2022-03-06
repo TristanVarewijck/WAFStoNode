@@ -7,8 +7,8 @@ import { apiKey } from "./apiProvider.js";
 import { articleObserver } from "./articleObserver.js";
 
 // variables
-const input = document.querySelector("#searchForm input");
-const form = document.getElementById("searchForm");
+const input = document.querySelector("form:first-of-type input");
+const form = document.querySelector("form:first-of-type");
 const articlesContainer = document.querySelector(
   "main:first-of-type section section:last-of-type ul"
 );
@@ -16,10 +16,15 @@ const mybutton = document.querySelector("body > button");
 const navbar = document.querySelectorAll("nav");
 const mains = document.querySelectorAll("main");
 const speechForm = document.getElementById("speechForm"),
-  textInput = document.getElementById("textInput"),
-  speakButton = document.getElementById("speechButton"),
-  cancelButton = document.getElementById("cancelButton");
-// get the api
+  textInput = document.querySelector("#speechForm p"),
+  speakButton = document.querySelector(
+    "main:nth-of-type(2) button:first-of-type"
+  ),
+  cancelButton = document.querySelector(
+    "main:nth-of-type(2) button:last-of-type"
+  );
+
+// GET SPEECH API
 let synth = window.speechSynthesis;
 const speechSettings = {
   lang: "en-GB",

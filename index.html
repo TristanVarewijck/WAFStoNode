@@ -26,8 +26,8 @@
           </li>
 
           <li>
-            <form id="searchForm">
-              <div class="input-wrapper">
+            <form>
+              <div>
                 <input type="text" placeholder="search for a topic" />
                 <button type="submit">
                   <img
@@ -89,19 +89,21 @@
         <div>
           <small><i class="fa-solid fa-file-signature"></i>John Doe</small>
           <div>
-            <button form="speechForm" id="speechButton" type="submit">
+            <button form="speechForm" type="submit">
               <i class="fa-solid fa-headphones"></i>
             </button>
 
-            <button id="cancelButton" class="hidden" type="button">
+            <button class="hidden" type="button">
+              <!-- default state is "hidden"-->
               <i class="fa-solid fa-stop"></i>
             </button>
           </div>
           <small><i class="fa-solid fa-clock"></i>19 Feb, 2022</small>
         </div>
 
+        <!-- form connect by id with the submit button  -->
         <form id="speechForm">
-          <p role="textbox" id="textInput" readonly></p>
+          <p role="textbox" readonly></p>
         </form>
       </section>
     </main>
