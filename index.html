@@ -47,12 +47,22 @@
           <!-- filters container -->
         </ul>
 
-        <h1>Breaking News</h1>
+        <h1><span>Breaking</span> News</h1>
         <!-- lOADING STATE -->
         <section>
           <i class="fas fa-spinner"></i>
           <p>Searching for the latest Articles..</p>
         </section>
+
+        <!-- EMPTY STATE -->
+        <section>
+          <i class="fa-solid fa-question"></i>
+          <p>
+            No results found for "<span><!-- unvalid searchTerm --></span>"
+            please try again..
+          </p>
+        </section>
+
         <section>
           <ul>
             <!-- articles container -->
@@ -109,7 +119,7 @@
     </main>
 
     <main data-route="error">
-      <h1>this is an error</h1>
+      <h2>this is an error</h2>
     </main>
 
     <script src="scripts/app.js" type="module"></script>

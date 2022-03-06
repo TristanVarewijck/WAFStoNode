@@ -5,8 +5,10 @@ import { parseDate } from "./parseCurrentDate.js";
 import { scrollToTop } from "./toTopButton.js";
 import { apiKey } from "./apiProvider.js";
 import { articleObserver } from "./articleObserver.js";
+import { displayEmptyState, hideEmptyState } from "./empty.js";
 
 // variables
+const title = document.querySelector("h1 span");
 const input = document.querySelector("form:first-of-type input");
 const form = document.querySelector("form:first-of-type");
 const articlesContainer = document.querySelector(
@@ -70,6 +72,9 @@ function updateUI(route) {
   activeMain.classList.remove("disabled");
 }
 
+let articles;
+console.log(articles);
+
 // Function
 function getData(e) {
   // Show loading state
@@ -77,6 +82,9 @@ function getData(e) {
 
   if (input.value) {
     e.preventDefault();
+    title.innerHTML = `"${input.value}"`;
+  } else {
+    title.innerHTML = "Breaking";
   }
 
   while (articlesContainer.firstChild) {
@@ -85,16 +93,19 @@ function getData(e) {
 
   fetch(
     input.value
-      ? `https://newsapi.org/v2/everything?q=${input.value}&from=2022-02-15&sortBy=publishedAt&language=en&pageSize=100&apiKey=${apiKey}`
-      : "/test.json"
+      ? `https://newsapi.org/v2/everything?q=${input.value}&sortBy=publishedAt&language=en&pageSize=100&apiKey=${apiKey}`
+      : `https://newsapi.org/v2/top-headlines?country=us&category=technology&pageSize=100&apiKey=${apiKey}`
   )
     .then((response) => {
       return response.json();
     })
     .then((myJson) => {
+      articles = myJson.articles;
       // Hide loading state
       hideLoading();
-      let articles = myJson.articles;
+      // decide if empty state is needed...
+      articles.length <= 0 ? displayEmptyState(input.value) : hideEmptyState();
+
       return articles;
     })
     .then((articles) => {
@@ -152,12 +163,9 @@ function getData(e) {
 window.onload = getData();
 
 // check browser support
-if (SpeechSynthesisUtterance !== undefined) {
-  console.log("supported");
-} else {
-  console.log("not supported");
-}
-
+SpeechSynthesisUtterance !== undefined
+  ? console.log("supported")
+  : console.log("not supported");
 // text input
 textInput.innerHTML =
   "The number of refugees fleeing the war in Ukraine could soon exceed 1.5m people, according to the UN refugee agency (UNHCR).This is the fastest moving refugee crisis we have seen in Europe since the end of World War Two, the UNHCR's head told Reuters news agency Around 1.3m people have already fled their homes since the invasion began. Poland is said to have taken in over half of all the refugees so far, according to the country's president. The number is also high in countries like Hungary and Romania. But not all refugees are choosing to stay in the countries they first arrive in. Take Romania for instance. Of the 200,000 people who travelled there in the first eight days of the war, 140,000 then left to travel onto other countries, leaving around 60,000 in Romania, according to the UNHCR. Countries bordering Ukraine are therefore acting as the first stop for many people fleeing the war, as they travel onto other European countries further away.";

@@ -11,6 +11,7 @@
   --text: #43466a;
   --highlight: #ffffff;
   --gray: #cecece;
+  --action: #001aff;
 }
 
 /* GLOBAL STYLES */
@@ -132,7 +133,7 @@ main[data-route="landing"] nav ul li:nth-child(1) {
 }
 
 main[data-route="landing"] section:first-of-type a:hover {
-  color: #2134e4;
+  color: var(--action);
   transition: 0.2s ease-in-out;
 }
 
@@ -186,6 +187,50 @@ main[data-route="landing"] nav ul li:nth-child(3) button i {
   font-size: 20px;
 }
 
+/* EMPTY STATE */
+main[data-route="landing"] > section section:nth-of-type(2) {
+  display: none;
+}
+
+main[data-route="landing"] > section section:nth-of-type(2).display {
+  display: block;
+  text-align: center;
+  margin-top: 5em;
+  opacity: 1;
+}
+
+main[data-route="landing"] > section section:nth-of-type(2) i {
+  font-size: 2.5em;
+  color: var(--action);
+  animation: wiggle 1.5s infinite linear;
+}
+
+@keyframes wiggle {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-12deg);
+  }
+  50% {
+    transform: rotate(12deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+main[data-route="landing"] > section section:nth-of-type(2) p {
+  margin-top: 2em;
+  font-size: 1em;
+  color: var(--text);
+  opacity: 87%;
+}
+
+main[data-route="landing"] > section section:nth-of-type(2) p span {
+  color: var(--action);
+}
+
 /* LOADING STATE */
 main[data-route="landing"] > section section:first-of-type {
   display: none;
@@ -194,7 +239,7 @@ main[data-route="landing"] > section section:first-of-type {
 main[data-route="landing"] > section section:first-of-type i {
   font-size: 2.5em;
   animation: spin 1.5s infinite linear;
-  color: blue;
+  color: var(--action);
 }
 
 @keyframes spin {
@@ -214,13 +259,14 @@ main[data-route="landing"] > section section:first-of-type.display {
   display: block;
   text-align: center;
   margin-top: 5em;
-  opacity: 0.6;
+  opacity: 1;
 }
 
 main[data-route="landing"] > section section:first-of-type p {
   margin-top: 2em;
   font-size: 1em;
   color: var(--text);
+  opacity: 87%;
 }
 
 /* CARD SCROLL ANIMATION */
@@ -351,7 +397,7 @@ body > button {
   cursor: pointer;
   padding: 15px;
   border-radius: 50%;
-  border: solid 1px blue;
+  border: solid 1px var(--action);
   width: 50px;
   height: 50px;
   transition: 0.2s ease-in-out;
