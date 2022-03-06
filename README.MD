@@ -102,7 +102,7 @@ In addition to the features that are now available, there are also additional fe
 - [ ] keep scroll position
 - [x] replace api call
 - [x] title placeholder
-- [ ] empty state
+- [x] empty state
 
 ## Meta
 

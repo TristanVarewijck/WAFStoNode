@@ -391,6 +391,7 @@ main[data-route="landing"] section section:last-of-type ul li:first-of-type {
 body > button {
   display: none;
   position: fixed;
+  z-index: 1;
   bottom: 2%;
   right: 2%;
   background-color: none;

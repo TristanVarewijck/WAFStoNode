@@ -51,6 +51,7 @@ mybutton.addEventListener("click", scrollToTop); // to top button call
 // Routes
 routie({
   "article/:id": (id) => {
+    console.log(id);
     updateUI("template");
   },
   " ": () => {
@@ -75,7 +76,7 @@ function updateUI(route) {
 let articles;
 console.log(articles);
 
-// Function
+// GET DATA
 function getData(e) {
   // Show loading state
   displayLoading();
@@ -130,7 +131,7 @@ function getData(e) {
         })"></div>
 
         <article>
-        <a href=#article/${article.id} onclick="detailArticle()">
+        <a href=#article/${article.id}>
           <h2>${article.title}</h2>
           </a>
             <div>
@@ -156,11 +157,18 @@ function getData(e) {
 
       return articles;
     })
+    .then((articles) => {
+      clickedArticle(articles);
+    })
     .catch((err) => {
       console.log(err);
     });
 }
 window.onload = getData();
+
+function clickedArticle(articles) {
+  console.log(articles);
+}
 
 // check browser support
 SpeechSynthesisUtterance !== undefined
