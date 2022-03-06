@@ -131,7 +131,7 @@ function getData(e) {
         })"></div>
 
         <article>
-        <a href=#article/${article.id}>
+        <a href=#article/${article.id} onclick="detailArticle()">
           <h2>${article.title}</h2>
           </a>
             <div>

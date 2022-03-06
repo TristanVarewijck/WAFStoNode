@@ -20,46 +20,19 @@ On the app you can see the most relevant articles in the tech world, in addition
 
 ### Table of Contents
 
-- [Install](#install)
-- [Used Tools](#used-tools)
-- [Visuals](#visuals)
-- [!important files](#mportant-files)
-- [Meta](#meta)
+- [Features](##features)
+- [API](##API)
+- [Checklist](##Checklist)
+- [Meta](##Meta)
 - [License](#license)
 
-## Install
+## Features
 
-Clone the GitHub Repo locally
-
-```
-git clone https://github.com/TristanVarewijck/functional-programming
-```
-
-Install the Packages
-
-```
-yarn add
-```
-
-Start the Server
-
-```
-yarn run start
-```
-
-### .env Sample
-
-You need the following keys to make a connection to the API. :
-
-```
-API_URL='https://api.coingecko.com/api/v3/coins/markets?vs_currency=eur&order=market_cap_desc&per_page=1&page=1&sparkline=false&price_change_percentage=24h'
-```
-
-## Used Tools
-
-- [git](https://git-scm.com/)
-- [json](https://www.json.org/json-en.html)
-- [ejs](https://pugjs.org/api/getting-started.html)
+- Search for topics
+- Endless scroll for most recent articles
+- Sharing
+- Text to Speech
+- Suggested Topics
 
 ## API
 
@@ -71,38 +44,15 @@ The end-points that i am using are:
 
 The first one is so i can search for specifics topics and the other one is so i can see the latest headlines.
 
-## !mportant files
-
-Of course all files are important but you should at least have a look at these files if you are interested in this repo.
-Viewing these files will give you an idea of how this software is built.
-
-[index.js](https://github.com/TristanVarewijck/functional-programming/blob/master/index.js) :page_facing_up:
-
-[crypto.js](https://github.com/TristanVarewijck/functional-programming/blob/master/modules/crypto.js) :page_facing_up:
-
-[color-data.js](https://github.com/TristanVarewijck/functional-programming/blob/master/modules/color-data.js) :page_facing_up:
-
-[index.ejs](https://github.com/TristanVarewijck/functional-programming/blob/master/views/index.ejs) :page_facing_up:
-
-[package.json](https://github.com/TristanVarewijck/functional-programming/blob/master/package.json) :page_facing_up:
-
 ## Checklist
 
-In addition to the features that are now available, there are also additional features that can make the app better. Do you also have ideas let them know in a Pull Request
+In addition to the features that are now available, there are also additional features and tweaks that can make the app better. Do you have ideas let them know in a Pull Request
 
-- [ ]
 - [ ] Detail pages
-- [x] detail page - placeholder content
-- [x] screen switch animation
-- [x] fix - animation
-- [ ] (locomotive scroll testing)
-- [ ] filter buttons make it working
-- [x] css refactoring
+- [ ] Locomotive scroll testing
+- [ ] Filter buttons
 - [ ] js refactoring
-- [ ] keep scroll position
-- [x] replace api call
-- [x] title placeholder
-- [x] empty state
+- [ ] keep-scroll position
 
 ## Meta
 
@@ -114,10 +64,6 @@ Tristan Varewijck - tristan.varewijck@gmail.com - https://github.com/TristanVare
 
 Usage is provided under the [MIT License](https://github.com/git/git-scm.com/blob/master/MIT-LICENSE.txt) MIT. See [LICENSE](https://github.com/TristanVarewijck/TechDefined/blob/master/LICENSE) for the full details. | |
 
-<!-- Add a link to your live demo in Github Pages 🌐   // -->
-
-<!-- ☝️ replace this description with a description of your own work    // -->
-
 <!-- replace the code in the /docs folder with your own, so you can showcase your work with GitHub Pages 🌍 -->
 
 <!-- Add a nice poster image here at the end of the week, showing off your shiny frontend 📸  // -->
@@ -126,10 +72,6 @@ Usage is provided under the [MIT License](https://github.com/git/git-scm.com/blo
 
 <!-- How about a section that describes how to install this project? 🤓 -->
 
-<!-- ...but how does one use this project? What are its features 🤔 -->
-
 <!-- What external data source is featured in your project and what are its properties 🌠  // -->
 
 <!-- Maybe a checklist of done stuff and stuff still on your wishlist? ✅ // -->
-
-<!-- How about a license here? 📜 (or is it a licence?) 🤷 // -->
