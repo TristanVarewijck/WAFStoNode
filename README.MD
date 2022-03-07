@@ -22,8 +22,8 @@ To get acces on the full API make sure to see their [pricing scheme](https://new
 
 ## Description :label:
 
-For the project WAFS I'm going to make a "single page" tech-news app.
-On the app you can see the most relevant articles in the tech world, in addition, you have suggested search results and you can search for articles on a specific topic.
+For the project WAFS (Web Application from Scratch) I'm going to make a "single page" tech-news app.
+On the app you can see the most relevant articles in the tech world, in addition, you have suggested search results and you can search for articles on a specific topic. For the project i am using the NewsAPI.
 
 ---
 
@@ -31,7 +31,8 @@ On the app you can see the most relevant articles in the tech world, in addition
 
 - [Features](#features)
 - [API](#api)
-- [ToDoList](#todolist :white_check_mark:)
+- [ToDoList](#todolist)
+- [Usage](#Usage)
 - [Meta](#meta)
 - [License](#license)
 
@@ -83,7 +84,7 @@ this one is so i can see the latest headlines in a specific category:
 
 ## ToDoList
 
-:white_check_mark: In addition to the features that are now available, there are also additional features and tweaks that can make the app better. Do you have ideas let them know in a [PR](https://github.com/TristanVarewijck/TechDefined/pulls)
+In addition to the features that are now available, there are also additional features and tweaks that can make the app better. Do you have ideas let them know in a [PR](https://github.com/TristanVarewijck/TechDefined/pulls) :white_check_mark:
 
 - [ ] Detail pages
 - [ ] Locomotive scroll testing
@@ -92,6 +93,10 @@ this one is so i can see the latest headlines in a specific category:
 - [ ] Keep-scroll position
 - [ ] No refresh on page switch
 - [ ] Reponsiveness
+
+---
+
+## Usage
 
 ---
 
@@ -110,7 +115,5 @@ Tristan Varewijck <br>
 Usage is provided under the [MIT License](https://github.com/git/git-scm.com/blob/master/MIT-LICENSE.txt) MIT. See [LICENSE](https://github.com/TristanVarewijck/TechDefined/blob/master/LICENSE) for the full details.
 
 <!-- replace the code in the /docs folder with your own, so you can showcase your work with GitHub Pages 🌍 -->
-
-<!-- Maybe a table of contents here? 📚  // -->
 
 <!-- How about a section that describes how to install this project? 🤓 -->
