@@ -20,14 +20,18 @@ To get acces on the full API make sure to see their [pricing scheme](https://new
 
 ---
 
-## Description :label:
+## Description
+
+:label:
 
 For the project WAFS I'm going to make a "single page" tech-news app.
 On the app you can see the most relevant articles in the tech world, in addition, you have suggested search results and you can search for articles on a specific topic.
 
 ---
 
-## Table of Contents :arrow_right_hook:
+## Table of Contents
+
+:arrow_right_hook
 
 - [Features](#features)
 - [API](#api)
@@ -37,7 +41,9 @@ On the app you can see the most relevant articles in the tech world, in addition
 
 ---
 
-## Features :chains:
+## Features
+
+:chains:
 
 1. **Search** <br>
    Search for the Topics you are interested from over the whole World.
@@ -54,7 +60,9 @@ On the app you can see the most relevant articles in the tech world, in addition
 
 ---
 
-## API :green_circle:
+## API
+
+:green_circle:
 
 <img src="https://github.com/TristanVarewijck/TechDefined/blob/main/assets/images/newApi-LOGO.jpeg" alt="newsapi-logo" width="200px"/>
 
@@ -79,7 +87,9 @@ this one is so i can see the latest headlines in a specific category:
 
 ---
 
-## ToDoList:white_check_mark:
+## ToDoList
+
+:white_check_mark:
 
 In addition to the features that are now available, there are also additional features and tweaks that can make the app better. Do you have ideas let them know in a [PR](https://github.com/TristanVarewijck/TechDefined/pulls)
 
