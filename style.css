@@ -305,7 +305,7 @@ main[data-route="landing"] > section > ul li button {
   font-weight: 600;
   font-size: 14px;
   width: fit-content;
-  transition: 2s ease-in;
+  transition: 0.2s ease-in;
 }
 
 main[data-route="landing"] > section > ul li button:hover,
