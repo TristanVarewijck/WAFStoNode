@@ -39,24 +39,16 @@ On the app you can see the most relevant articles in the tech world, in addition
 
 ## Features :chains:
 
-1. Search
-   ⋅⋅⋅Search for the Topics you are interested from over the whole World.
-2. Endless scroll
-   ⋅⋅⋅Scroll trough endless articles related to your topic or scroll to the headlines of this current day!
-3. Sharing
-   ⋅⋅⋅Share articles on Twitter.
-4. Text to Speech
-   ⋅⋅⋅With the Text to Speech Feature you can have it read to you instead of reading it yourself.
-5. Suggested Topics
-   ⋅⋅⋅With the filter-buttons your can search on topics that are suggested by the App.
-
-   4. And another item.
-
-⋅⋅⋅You can have properly indented paragraphs within list items. Notice the blank line above, and the leading spaces (at least one, but we'll use three here to also align the raw Markdown).
-
-⋅⋅⋅To have a line break without a paragraph, you will need to use two trailing spaces.⋅⋅
-⋅⋅⋅Note that this line is separate, but within the same paragraph.⋅⋅
-⋅⋅⋅(This is contrary to the typical GFM line break behaviour, where trailing spaces are not required.)
+1. **Search** <br>
+   Search for the Topics you are interested from over the whole World.
+2. **Endless scroll** <br>
+   Scroll trough endless articles related to your topic or scroll to the headlines of this current day!
+3. **Sharing** <br>
+   Share articles on Twitter.
+4. **Text to Speech** <br>
+   With the Text to Speech Feature you can have it read to you instead of reading it yourself.
+5. **Suggested Topics** <br>
+   With the filter-buttons your can search on topics that are suggested by the App.
 
 ---
 
