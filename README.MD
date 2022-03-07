@@ -31,7 +31,7 @@ On the app you can see the most relevant articles in the tech world, in addition
 
 - [Features](#features)
 - [API](#api)
-- [ToDoList](#todolist)
+- [ToDoList](#todolist:white_check_mark:)
 - [Meta](#meta)
 - [License](#license)
 
@@ -79,7 +79,7 @@ this one is so i can see the latest headlines in a specific category:
 
 ---
 
-## ToDoList :white_check_mark:
+## ToDoList:white_check_mark:
 
 In addition to the features that are now available, there are also additional features and tweaks that can make the app better. Do you have ideas let them know in a [PR](https://github.com/TristanVarewijck/TechDefined/pulls)
 
