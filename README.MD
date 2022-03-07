@@ -39,16 +39,16 @@ On the app you can see the most relevant articles in the tech world, in addition
 
 ## Features :chains:
 
-- Search
-  ⋅⋅⋅Search for the Topics you are interested from over the whole World.
-- Endless scroll
-  ⋅⋅⋅Scroll trough endless articles related to your topic or scroll to the headlines of this current day!
-- Sharing
-  ⋅⋅⋅Share articles on Twitter.
-- Text to Speech
-  ⋅⋅⋅With the Text to Speech Feature you can have it read to you instead of reading it yourself.
-- Suggested Topics
-  ⋅⋅⋅With the filter-buttons your can search on topics that are suggested by the App.
+1. Search
+   ⋅⋅⋅Search for the Topics you are interested from over the whole World.
+2. Endless scroll
+   ⋅⋅⋅Scroll trough endless articles related to your topic or scroll to the headlines of this current day!
+3. Sharing
+   ⋅⋅⋅Share articles on Twitter.
+4. Text to Speech
+   ⋅⋅⋅With the Text to Speech Feature you can have it read to you instead of reading it yourself.
+5. Suggested Topics
+   ⋅⋅⋅With the filter-buttons your can search on topics that are suggested by the App.
 
 ---
 
