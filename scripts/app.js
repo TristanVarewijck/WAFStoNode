@@ -25,6 +25,7 @@ const speechForm = document.getElementById("speechForm"),
   cancelButton = document.querySelector(
     "main:nth-of-type(2) button:last-of-type"
   );
+let articles;
 
 // GET SPEECH API
 let synth = window.speechSynthesis;
@@ -49,32 +50,6 @@ mybutton.addEventListener("click", scrollToTop); // to top button call
 // document.addEventListener("scroll", scanDocument); // call article animation
 
 // Routes
-routie({
-  "article/:id": (id) => {
-    console.log(id);
-    updateUI("template");
-  },
-  " ": () => {
-    updateUI("landing");
-    synth.cancel();
-  },
-  error: () => {
-    updateUI("error");
-    synth.cancel();
-  },
-});
-
-// Update UIfor pages
-function updateUI(route) {
-  mains.forEach((main) => {
-    main.classList.add("disabled");
-  });
-  let activeMain = document.querySelector(`[data-route=${route}]`);
-  activeMain.classList.remove("disabled");
-}
-
-let articles;
-console.log(articles);
 
 // GET DATA
 function getData(e) {
@@ -128,17 +103,17 @@ function getData(e) {
           article.urlToImage
             ? article.urlToImage
             : "./assets/icons/no-image.svg"
-        })"></div>
+          })"></div>
 
         <article>
-        <a href=#article/${article.id} onclick="detailArticle()">
+        <a href=#article/${article.id}">
           <h2>${article.title}</h2>
           </a>
             <div>
             <small><i class="fa-solid fa-clock"></i>${publishedAt}</small>
             <small><i class="fa-solid fa-file-signature"></i> ${
-              article.author ? article.author : "-"
-            }</small>
+          article.author ? article.author : "-"
+          }</small>
             </div>
         </article>
         
@@ -158,17 +133,37 @@ function getData(e) {
       return articles;
     })
     .then((articles) => {
-      clickedArticle(articles);
+      routie({
+        'article/:id': (id) => {
+          console.log(id)
+          console.log(articles);
+          let detailArticle = articles.filter(item => `${item.id}` === id);
+          console.log(detailArticle);
+
+          updateUI("template");
+        },
+        " ": () => {
+          updateUI("landing");
+          synth.cancel();
+        },
+        error: () => {
+          updateUI("error");
+          synth.cancel();
+        },
+      });
+      function updateUI(route) {
+        mains.forEach((main) => {
+          main.classList.add("disabled");
+        });
+        let activeMain = document.querySelector(`[data-route=${route}]`);
+        activeMain.classList.remove("disabled");
+      }
     })
     .catch((err) => {
       console.log(err);
     });
 }
 window.onload = getData();
-
-function clickedArticle(articles) {
-  console.log(articles);
-}
 
 // check browser support
 SpeechSynthesisUtterance !== undefined
