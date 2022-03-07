@@ -1,14 +1,14 @@
-## Project WAFS :gear:
+# Project WAFS :gear:
 
-_Shields that represent my project - They change over time._ (https://shields.io/)
+_Shields that represent my project - They change over time._
 
 ![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/TristanVarewijck/TechDefined) ![Isseus](https://img.shields.io/github/issues/TristanVarewijck/TechDefined) ![Language](https://img.shields.io/github/languages/top/TristanVarewijck/TechDefined) ![Count](https://img.shields.io/github/languages/count/TristanVarewijck/TechDefined?color=#a55eea) ![NPM](https://img.shields.io/npm/v/npm) ![MIT-License](https://img.shields.io/apm/l/vim-mode)
 
-### TechDefined Concept Design :pencil2:
+## TechDefined Concept Design :pencil2:
 
 ![TechDefined-concept-design](https://github.com/TristanVarewijck/TechDefined/blob/main/assets/images/concept-display.png)
 
-### Live Demo :clapper:
+## Live Demo :clapper:
 
 See the latest updated demo here:
 [Link to DEMO](https://tristanvarewijck.github.io/TechDefined/)
@@ -20,19 +20,19 @@ To get acces on the full API make sure to see their [pricing scheme](https://new
 
 ---
 
-### Description :label:
+## Description :label:
 
 For the project WAFS I'm going to make a "single page" tech-news app.
 On the app you can see the most relevant articles in the tech world, in addition, you have suggested search results and you can search for articles on a specific topic.
 
 ---
 
-### Table of Contents :arrow_right_hook:
+## Table of Contents :arrow_right_hook:
 
-- [Features](##features)
-- [API](##API)
-- [Checklist](##Checklist)
-- [Meta](##Meta)
+- [Features](#features)
+- [API](#api)
+- [ToDoList](#todolist)
+- [Meta](#meta)
 - [License](#license)
 
 ---
@@ -49,6 +49,8 @@ On the app you can see the most relevant articles in the tech world, in addition
    With the Text to Speech Feature you can have it read to you instead of reading it yourself.
 5. **Suggested Topics** <br>
    With the filter-buttons your can search on topics that are suggested by the App.
+6. **Read more** <br>
+   Clicking on the banner of the article will bring your to the detail page where can read more about it.
 
 ---
 
@@ -77,21 +79,25 @@ this one is so i can see the latest headlines in a specific category:
 
 ---
 
-## Checklist :white_check_mark:
+## ToDoList :white_check_mark:
 
-In addition to the features that are now available, there are also additional features and tweaks that can make the app better. Do you have ideas let them know in a Pull Request
+In addition to the features that are now available, there are also additional features and tweaks that can make the app better. Do you have ideas let them know in a [PR](https://github.com/TristanVarewijck/TechDefined/pulls)
 
 - [ ] Detail pages
 - [ ] Locomotive scroll testing
 - [ ] Filter buttons
-- [ ] js refactoring
-- [ ] keep-scroll position
+- [ ] JS refactoring
+- [ ] Keep-scroll position
+- [ ] No refresh on page switch
+- [ ] Reponsiveness
 
 ---
 
 ## Meta
 
-Tristan Varewijck - tristan.varewijck@gmail.com - https://github.com/TristanVarewijck/TechDefined
+Tristan Varewijck <br>
+:email: [Tristan.varewijck@gmail.com](Tristan.varewijck@gmail.com)
+:large_blue_diamond: [https://www.linkedin.com/in/tristanvarewijck-1999/](https://www.linkedin.com/in/tristanvarewijck-1999/)
 
 ![Ask Me Anything !](https://img.shields.io/badge/Ask%20me-anything-1abc9c.svg)
 
@@ -99,16 +105,10 @@ Tristan Varewijck - tristan.varewijck@gmail.com - https://github.com/TristanVare
 
 ## License
 
-Usage is provided under the [MIT License](https://github.com/git/git-scm.com/blob/master/MIT-LICENSE.txt) MIT. See [LICENSE](https://github.com/TristanVarewijck/TechDefined/blob/master/LICENSE) for the full details. | |
+Usage is provided under the [MIT License](https://github.com/git/git-scm.com/blob/master/MIT-LICENSE.txt) MIT. See [LICENSE](https://github.com/TristanVarewijck/TechDefined/blob/master/LICENSE) for the full details.
 
 <!-- replace the code in the /docs folder with your own, so you can showcase your work with GitHub Pages 🌍 -->
-
-<!-- Add a nice poster image here at the end of the week, showing off your shiny frontend 📸  // -->
 
 <!-- Maybe a table of contents here? 📚  // -->
 
 <!-- How about a section that describes how to install this project? 🤓 -->
-
-<!-- What external data source is featured in your project and what are its properties 🌠  // -->
-
-<!-- Maybe a checklist of done stuff and stuff still on your wishlist? ✅ // -->
