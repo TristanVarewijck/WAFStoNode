@@ -13,12 +13,12 @@ _Shields that represent my project - They change over time._ (https://shields.io
 See the latest updated demo here:
 [Link to DEMO](https://tristanvarewijck.github.io/TechDefined/)
 
-:rotating_light: WARNING :rotating_light:
+:rotating_light: **WARNING** :rotating_light: <br>
 API does not work in the live-demo to see the full experience of this app, make sure to clone it locally and run in on your localhost.
 
 ---
 
-To get acces on the full API make sure to see their [pricing scheme](https://newsapi.org/pricing)
+To get acces on the full API make sure to see their [pricing scheme](https://newsapi.org/pricing).
 
 ### Description :label:
 
@@ -45,12 +45,14 @@ On the app you can see the most relevant articles in the tech world, in addition
 
 For this project i am using the NewsAPI from - [newsapi](https://newsapi.org/)
 
-To search on the app im using the endpoint below with the following params:
+To search on the app im using the endpoint below with the following params: <br>
 [https://newsapi.org/v2/everything](https://newsapi.org/v2/everything);
 
-| Param | #1  | #2  |
-| :---: | :-: | :-: |
-| value | 301 | 283 |
+####Params:
+
+|  Key  |    q    |   sortBy    | language | pageSize |  apiKey  |
+| :---: | :-----: | :---------: | :------: | :------: | :------: |
+| value | {input} | publishedAt |    en    |   100    | {apiKey} |
 
 [https://newsapi.org/v2/headlines](https://newsapi.org/v2/headlines)
 
