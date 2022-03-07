@@ -16,14 +16,16 @@ See the latest updated demo here:
 :rotating_light: **WARNING** :rotating_light: <br>
 API does not work in the live-demo to see the full experience of this app, make sure to clone it locally and run in on your localhost.
 
----
-
 To get acces on the full API make sure to see their [pricing scheme](https://newsapi.org/pricing).
+
+---
 
 ### Description :label:
 
 For the project WAFS I'm going to make a "single page" tech-news app.
 On the app you can see the most relevant articles in the tech world, in addition, you have suggested search results and you can search for articles on a specific topic.
+
+---
 
 ### Table of Contents :arrow_right_hook:
 
@@ -33,23 +35,32 @@ On the app you can see the most relevant articles in the tech world, in addition
 - [Meta](##Meta)
 - [License](#license)
 
+---
+
 ## Features :chains:
 
-- Search for topics
-- Endless scroll for most recent articles
+- Search
+  ⋅⋅⋅Search for the Topics you are interested from over the whole World.
+- Endless scroll
+  ⋅⋅⋅Scroll trough endless articles related to your topic or scroll to the headlines of this current day!
 - Sharing
+  ⋅⋅⋅Share articles on Twitter.
 - Text to Speech
+  ⋅⋅⋅With the Text to Speech Feature you can have it read to you instead of reading it yourself.
 - Suggested Topics
+  ⋅⋅⋅With the filter-buttons your can search on topics that are suggested by the App.
+
+---
 
 ## API :green_circle:
 
 <img src="https://github.com/TristanVarewijck/TechDefined/blob/main/assets/images/newApi-LOGO.jpeg" alt="newsapi-logo" width="200px"/>
 
-For this project i am using the NewsAPI from - [newsapi](https://newsapi.org/) <br>
+For this project i am using the NewsAPI from - [NewsAPI](https://newsapi.org/) <br>
 To search on the app im using the endpoints below with the following params:
 
 This one is so i can search articles for specific topics:
-[https://newsapi.org/v2/everything](https://newsapi.org/v2/everything);
+[https://newsapi.org/v2/everything](https://newsapi.org/v2/everything)
 
 |  Key  |    q    |   sortBy    | language | pageSize |  apiKey  |
 | :---: | :-----: | :---------: | :------: | :------: | :------: |
@@ -64,6 +75,8 @@ this one is so i can see the latest headlines in a specific category:
 
 :rotating_light: : As explained earlier the API is not usable outside your localhost, for this project i used the **FREE version** of this API.
 
+---
+
 ## Checklist :white_check_mark:
 
 In addition to the features that are now available, there are also additional features and tweaks that can make the app better. Do you have ideas let them know in a Pull Request
@@ -74,11 +87,15 @@ In addition to the features that are now available, there are also additional fe
 - [ ] js refactoring
 - [ ] keep-scroll position
 
+---
+
 ## Meta
 
 Tristan Varewijck - tristan.varewijck@gmail.com - https://github.com/TristanVarewijck/TechDefined
 
 ![Ask Me Anything !](https://img.shields.io/badge/Ask%20me-anything-1abc9c.svg)
+
+---
 
 ## License
 
