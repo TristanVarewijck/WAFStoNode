@@ -39,7 +39,7 @@ On the app you can see the most relevant articles in the tech world, in addition
 
 ## Features
 
-:chains:
+:chains: Features for this app are mainly still under construction.
 
 1. **Search** <br>
    Search for the Topics you are interested from over the whole World.
@@ -98,7 +98,7 @@ this one is so i can see the latest headlines in a specific category:
 ## Meta
 
 Tristan Varewijck <br>
-:email: [Tristan.varewijck@gmail.com](Tristan.varewijck@gmail.com)
+:email: [Tristan.varewijck@gmail.com](Tristan.varewijck@gmail.com) ||
 :large_blue_diamond: [https://www.linkedin.com/in/tristanvarewijck-1999/](https://www.linkedin.com/in/tristanvarewijck-1999/)
 
 ![Ask Me Anything !](https://img.shields.io/badge/Ask%20me-anything-1abc9c.svg)
