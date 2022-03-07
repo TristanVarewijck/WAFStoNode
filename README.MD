@@ -98,6 +98,35 @@ In addition to the features that are now available, there are also additional fe
 
 ## Usage
 
+For using this app yourself you need to follow the following steps:
+
+### Clone the GitHub Repo locally
+
+```
+git clone https://github.com/TristanVarewijck/TechDefined.git
+```
+
+### Connect your API key
+
+If you want to connect with the API you have to fill in your own personal apiKey wich you can get here: <br>
+[Get NewAPI apiKey](https://newsapi.org/).
+
+```
+https://newsapi.org/v2/everything?q=${input.value}&sortBy=publishedAt&language=en&pageSize=100&apiKey=${apiKey}
+https://newsapi.org/v2/top-headlines?country=us&category=technology&pageSize=100&apiKey=${apiKey}
+```
+
+### Run on Localhost
+
+Because i am using the free version of this API your need to run it on your localhost to test it. If you want to move further with this app make sure to check out the [pricing scheme](https://newsapi.org/pricing) of NewsAPI.
+
+For easily running this project on your localhost you can use a VSCODE extension named: <br>
+[live-server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
+
+After installing this extension make sure to reload en hit the "Go Live" button.
+
+### Thats it!
+
 ---
 
 ## Meta
