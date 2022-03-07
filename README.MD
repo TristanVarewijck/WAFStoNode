@@ -43,20 +43,26 @@ On the app you can see the most relevant articles in the tech world, in addition
 
 ## API :green_circle:
 
-For this project i am using the NewsAPI from - [newsapi](https://newsapi.org/)
+<img src="https://github.com/TristanVarewijck/TechDefined/blob/main/assets/images/newApi-LOGO.jpeg" alt="newsapi-logo" width="200px"/>
 
-To search on the app im using the endpoint below with the following params: <br>
+For this project i am using the NewsAPI from - [newsapi](https://newsapi.org/) <br>
+To search on the app im using the endpoints below with the following params:
+
+This one is so i can search articles for specific topics:
 [https://newsapi.org/v2/everything](https://newsapi.org/v2/everything);
-
-####Params:
 
 |  Key  |    q    |   sortBy    | language | pageSize |  apiKey  |
 | :---: | :-----: | :---------: | :------: | :------: | :------: |
 | value | {input} | publishedAt |    en    |   100    | {apiKey} |
 
+this one is so i can see the latest headlines in a specific category:
 [https://newsapi.org/v2/headlines](https://newsapi.org/v2/headlines)
 
-The first one is so i can search for specifics topics and the other one is so i can see the latest headlines.
+|  Key  | country |  category  | pageSize |  apiKey  |
+| :---: | :-----: | :--------: | :------: | :------: |
+| value |   us    | technology |   100    | {apiKey} |
+
+:rotating_light: : As explained earlier the API is not usable outside your localhost, for this project i used the **FREE version** of this API.
 
 ## Checklist :white_check_mark:
 
