@@ -100,23 +100,23 @@ In addition to the features that are now available, there are also additional fe
 
 For using this app yourself you need to follow the following steps:
 
-### Clone the GitHub Repo locally
+### 1. Clone Repo locally
 
 ```
 git clone https://github.com/TristanVarewijck/TechDefined.git
 ```
 
-### Connect your API key
+### 2. Connect your API key
 
-If you want to connect with the API you have to fill in your own personal apiKey wich you can get here: <br>
-[Get NewAPI apiKey](https://newsapi.org/).
+If you want to connect with the API you have to fill in your own personal {apiKey} wich you can get here: <br>
+[Get NewsAPI apiKey](https://newsapi.org/).
 
 ```
 https://newsapi.org/v2/everything?q=${input.value}&sortBy=publishedAt&language=en&pageSize=100&apiKey=${apiKey}
 https://newsapi.org/v2/top-headlines?country=us&category=technology&pageSize=100&apiKey=${apiKey}
 ```
 
-### Run on Localhost
+### 3. Run on Localhost
 
 Because i am using the free version of this API your need to run it on your localhost to test it. If you want to move further with this app make sure to check out the [pricing scheme](https://newsapi.org/pricing) of NewsAPI.
 
@@ -125,7 +125,7 @@ For easily running this project on your localhost you can use a VSCODE extension
 
 After installing this extension make sure to reload en hit the "Go Live" button.
 
-### Thats it!
+### Thats it! :smile:
 
 ---
 
@@ -144,5 +144,3 @@ Tristan Varewijck <br>
 Usage is provided under the [MIT License](https://github.com/git/git-scm.com/blob/master/MIT-LICENSE.txt) MIT. See [LICENSE](https://github.com/TristanVarewijck/TechDefined/blob/master/LICENSE) for the full details.
 
 <!-- replace the code in the /docs folder with your own, so you can showcase your work with GitHub Pages 🌍 -->
-
-<!-- How about a section that describes how to install this project? 🤓 -->
