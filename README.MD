@@ -31,7 +31,7 @@ On the app you can see the most relevant articles in the tech world, in addition
 
 - [Features](#features)
 - [API](#api)
-- [ToDoList](#todolist:white_check_mark:)
+- [ToDoList](#todolist :white_check_mark:)
 - [Meta](#meta)
 - [License](#license)
 
