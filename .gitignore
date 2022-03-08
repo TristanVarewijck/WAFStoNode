@@ -132,3 +132,4 @@ dist
 # js files
 /test.json
 /scripts/apiProvider.js
+/scripts/articleAnimation.js
