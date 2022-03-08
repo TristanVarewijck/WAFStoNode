@@ -86,10 +86,10 @@ this one is so i can see the latest headlines in a specific category:
 
 In addition to the features that are now available, there are also additional features and tweaks that can make the app better. Do you have ideas let them know in a [PR](https://github.com/TristanVarewijck/TechDefined/pulls) :white_check_mark:
 
-- [ ] Detail pages
+- [x] Detail pages
 - [ ] Locomotive scroll testing
 - [ ] Filter buttons
-- [ ] JS refactoring
+- [x] JS refactoring
 - [ ] Keep-scroll position
 - [ ] No refresh on page switch
 - [ ] Reponsiveness
@@ -142,5 +142,3 @@ Tristan Varewijck <br>
 ## License
 
 Usage is provided under the [MIT License](https://github.com/git/git-scm.com/blob/master/MIT-LICENSE.txt) MIT. See [LICENSE](https://github.com/TristanVarewijck/TechDefined/blob/master/LICENSE) for the full details.
-
-<!-- replace the code in the /docs folder with your own, so you can showcase your work with GitHub Pages 🌍 -->

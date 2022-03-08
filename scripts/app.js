@@ -1,4 +1,4 @@
-// imports
+// IMPORTS
 import { addFilters } from "./partials/filterButtons.js";
 import { parseDate } from "./partials/parseCurrentDate.js";
 import { scrollToTop } from "./partials/toTopButton.js";
@@ -10,18 +10,18 @@ mybutton.addEventListener("click", scrollToTop);
 
 // GET DATA
 getData();
-
 window.onload = getData();
 
+// ONSCROLL
 window.onscroll = () => {
   onScroll();
 };
 
-// Scroll top top behaviour
+// TO TOP SCROLLING BUTTON
 scrollToTop();
 
-// Current date
+// CURRENT DATE
 parseDate();
 
-// Call filters
+// FILTERS
 addFilters();

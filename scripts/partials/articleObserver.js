@@ -1,5 +1,4 @@
 const config = {
-  // rootMargin: "50px 20px 75px 30px",
   threshold: [0.5],
 };
 
