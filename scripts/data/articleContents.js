@@ -1,4 +1,4 @@
-import { articleObserver } from "../../scripts/articleObserver.js";
+import { articleObserver } from "../partials/articleObserver.js";
 
 const articlesContainer = document.querySelector(
   "main:first-of-type section section:last-of-type ul"

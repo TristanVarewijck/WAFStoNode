@@ -413,20 +413,6 @@ body > button:hover {
   background-color: var(--text); /* Add a dark-grey background on hover */
 }
 
-/* TEMPLATE PAGE */
-main[data-route="template"] {
-  animation: slideIn 0.5s ease-in-out;
-}
-
-@keyframes slideIn {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-
 /* ARTICLE IMAGE */
 main[data-route="template"] section > div:first-of-type {
   box-shadow: 4px 5px 18px rgba(219, 219, 219, 0.15);

@@ -1,8 +1,8 @@
-import { apiKey } from "../apiProvider.js";
-import { displayEmptyState, hideEmptyState } from "../empty.js";
-import { displayLoading, hideLoading } from "../loader.js";
+import { apiKey } from "./apiProvider.js";
+import { displayEmptyState, hideEmptyState } from "../states/empty.js";
+import { displayLoading, hideLoading } from "../states/loader.js";
 import { articleContent } from "./articleContents.js";
-import { routing } from "../routing.js";
+import { routing } from "../routes/routing.js";
 
 const form = document.querySelector("form:first-of-type");
 const input = document.querySelector("form:first-of-type input");
@@ -39,7 +39,6 @@ function getData(e) {
     .then((myJson) => {
       hideLoading();
       let articles = myJson.articles;
-      hideLoading();
       // decide if empty state is needed...
       articles.length <= 0 ? displayEmptyState(input.value) : hideEmptyState();
       return articles;
