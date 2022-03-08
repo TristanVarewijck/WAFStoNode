@@ -14,6 +14,7 @@ const form = document.querySelector("form:first-of-type");
 const articlesContainer = document.querySelector(
   "main:first-of-type section section:last-of-type ul"
 );
+
 const mybutton = document.querySelector("body > button");
 const navbar = document.querySelectorAll("nav");
 const mains = document.querySelectorAll("main");
@@ -95,25 +96,26 @@ function getData(e) {
         for (let i = 0; i < articles.length; i++) {
           articles.forEach((article) => {
             article.id = i++;
+            // article.date = publishedAt;
           });
         }
 
         const articleContents = `
-        <div class="bgImage" style="background-image:url(${
+        <div  style="background-image:url(${
           article.urlToImage
             ? article.urlToImage
             : "./assets/icons/no-image.svg"
-          })"></div>
+        })"></div>
 
         <article>
-        <a href=#article/${article.id}">
+        <a href=#article/${article.id}>
           <h2>${article.title}</h2>
           </a>
             <div>
             <small><i class="fa-solid fa-clock"></i>${publishedAt}</small>
             <small><i class="fa-solid fa-file-signature"></i> ${
-          article.author ? article.author : "-"
-          }</small>
+              article.author ? article.author : "-"
+            }</small>
             </div>
         </article>
         
@@ -133,12 +135,47 @@ function getData(e) {
       return articles;
     })
     .then((articles) => {
+      const detailContentContainer = document.querySelector(
+        "main:nth-of-type(2) section article"
+      );
+      console.log(detailContentContainer);
       routie({
-        'article/:id': (id) => {
-          console.log(id)
-          console.log(articles);
-          let detailArticle = articles.filter(item => `${item.id}` === id);
+        "article/:id": (id) => {
+          console.log(id);
+          let detailArticle = articles.filter((item) => `${item.id}` === id);
           console.log(detailArticle);
+
+          detailArticle.forEach((item) => {
+            const template = ` 
+            <div class="bgImage" style="background-image:url(${
+              item.urlToImage ? item.urlToImage : "./assets/icons/no-image.svg"
+            })"></div>
+            <h2>
+              ${item.title}
+            </h2>
+    
+            <div>
+              <small><i class="fa-solid fa-file-signature"></i>${
+                item.author
+              }</small>
+              <div>
+                <button form="speechForm" type="submit">
+                  <i class="fa-solid fa-headphones"></i>
+                </button>
+    
+                <button class="hidden" type="button">
+                  <!-- default state is "hidden"-->
+                  <i class="fa-solid fa-stop"></i>
+                </button>
+              </div>
+              <small><i class="fa-solid fa-clock"></i>-</small>
+            </div>`;
+
+            const detailSection = document.createElement("div");
+            detailSection.innerHTML = template;
+            detailContentContainer.appendChild(detailSection);
+            textInput.innerHTML = item.content;
+          });
 
           updateUI("template");
         },
@@ -170,9 +207,7 @@ SpeechSynthesisUtterance !== undefined
   ? console.log("supported")
   : console.log("not supported");
 // text input
-textInput.innerHTML =
-  "The number of refugees fleeing the war in Ukraine could soon exceed 1.5m people, according to the UN refugee agency (UNHCR).This is the fastest moving refugee crisis we have seen in Europe since the end of World War Two, the UNHCR's head told Reuters news agency Around 1.3m people have already fled their homes since the invasion began. Poland is said to have taken in over half of all the refugees so far, according to the country's president. The number is also high in countries like Hungary and Romania. But not all refugees are choosing to stay in the countries they first arrive in. Take Romania for instance. Of the 200,000 people who travelled there in the first eight days of the war, 140,000 then left to travel onto other countries, leaving around 60,000 in Romania, according to the UNHCR. Countries bordering Ukraine are therefore acting as the first stop for many people fleeing the war, as they travel onto other European countries further away.";
-// speak on submit
+
 speechForm.onsubmit = function (event) {
   event.preventDefault();
 

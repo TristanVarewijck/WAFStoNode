@@ -318,7 +318,8 @@ main[data-route="landing"] > section > ul li button:active {
 
 /* ARTICLE CARDS */
 /* BIG CARD */
-main[data-route="landing"] section section:last-of-type ul li:first-of-type div:first-child {
+main[data-route="landing"] section section:last-of-type ul li:first-of-type div:first-child,
+.bgImage {
   box-shadow: 4px 5px 18px rgba(219, 219, 219, 0.15);
   border-radius: 19px;
   width: 100%;
