@@ -9,7 +9,6 @@ const mybutton = document.querySelector("body > button");
 mybutton.addEventListener("click", scrollToTop);
 
 // GET DATA
-getData();
 window.onload = getData();
 
 // ONSCROLL

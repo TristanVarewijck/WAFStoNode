@@ -1,5 +1,6 @@
 import { templateData } from "./template.js";
 const mains = document.querySelectorAll("main");
+
 let synth = window.speechSynthesis;
 
 const routing = (articles) => {
@@ -14,7 +15,7 @@ const routing = (articles) => {
     },
     error: () => {
       updateUI("error");
-      synth.cancel();
+      console.log(error);
     },
   });
   function updateUI(route) {
