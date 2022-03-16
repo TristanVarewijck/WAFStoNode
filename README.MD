@@ -62,11 +62,11 @@ On the app you can see the most relevant articles in the tech world, in addition
 
 Here you can see 2 activity diagrams on usual behaviours of the user of this app.
 
-1. Default Diagram
-   <img src="https://github.com/TristanVarewijck/TechDefined/blob/main/assets/images/Default-flow.png" alt="default-flow" width="200px"/>
+1. Default Diagram <br>
+   <img src="https://github.com/TristanVarewijck/TechDefined/blob/main/assets/images/Default-flow.png" alt="default-flow" width="600px"/>
 
-2. Search Diagram + (error)
-   <img src="https://github.com/TristanVarewijck/TechDefined/blob/main/assets/images/Search-flow.png" alt="search-flow" width="200px"/>
+2. Search Diagram + (error) <br>
+   <img src="https://github.com/TristanVarewijck/TechDefined/blob/main/assets/images/Search-flow.png" alt="search-flow" width="600px"/>
 
 ## API
 
