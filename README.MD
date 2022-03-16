@@ -30,6 +30,7 @@ On the app you can see the most relevant articles in the tech world, in addition
 ## Table of Contents :arrow_right_hook:
 
 - [Features](#features)
+- [Activiy] (#activitydiagram)
 - [API](#api)
 - [ToDoList](#todolist)
 - [Usage](#Usage)
@@ -56,6 +57,16 @@ On the app you can see the most relevant articles in the tech world, in addition
    Clicking on the banner of the article will bring your to the detail page where can read more about it.
 
 ---
+
+## Activity Diagram
+
+Here you can see 2 activity diagrams on usual behaviours of the user of this app.
+
+1. Default Diagram
+   <img src="https://github.com/TristanVarewijck/TechDefined/blob/main/assets/images/Default-flow.png" alt="default-flow" width="200px"/>
+
+2. Search Diagram + (error)
+   <img src="https://github.com/TristanVarewijck/TechDefined/blob/main/assets/images/Search-flow.png" alt="search-flow" width="200px"/>
 
 ## API
 
@@ -86,12 +97,12 @@ this one is so i can see the latest headlines in a specific category:
 
 In addition to the features that are now available, there are also additional features and tweaks that can make the app better. Do you have ideas let them know in a [PR](https://github.com/TristanVarewijck/TechDefined/pulls) :white_check_mark:
 
-- [x] Detail pages
+- [x] Detail pages (data)
 - [ ] Locomotive scroll testing
-- [ ] Filter buttons
+- [ ] Working filter buttons
 - [x] JS refactoring
 - [ ] Keep-scroll position
-- [ ] No refresh on page switch
+- [x] No refresh on page switch
 - [ ] Reponsiveness
 
 ---
