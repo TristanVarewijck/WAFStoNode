@@ -19,31 +19,31 @@ function templateData(id, articles) {
 
   detailArticle.forEach((item) => {
     const template = ` 
-        <div class="bgImage" style="background-image:url(${
-          item.urlToImage ? item.urlToImage : "./assets/icons/no-image.svg"
-        })"></div>
-        <h2>
-          ${item.title}
-        </h2>
-
-        <div>
-          <small><i class="fa-solid fa-file-signature"></i>${
-            item.author
-          }</small>
+          <div class="bgImage" style="background-image:url(${
+            item.urlToImage ? item.urlToImage : "./assets/icons/no-image.svg"
+          })"></div>
+          <h2>
+            ${item.title}
+          </h2>
+  
           <div>
-            <button form="speechForm" type="submit">
-              <i class="fa-solid fa-headphones"></i>
-            </button>
-
-            <button class="hidden" type="button">
-              <!-- default state is "hidden"-->
-              <i class="fa-solid fa-stop"></i>
-            </button>
-          </div>
-          <small><i class="fa-solid fa-file-signature"></i> ${
-            item.author ? item.author : "-"
-          }</small>
-        </div>`;
+            <small><i class="fa-solid fa-file-signature"></i>${
+              item.author
+            }</small>
+            <div>
+              <button form="speechForm" type="submit">
+                <i class="fa-solid fa-headphones"></i>
+              </button>
+  
+              <button class="hidden" type="button">
+                <!-- default state is "hidden"-->
+                <i class="fa-solid fa-stop"></i>
+              </button>
+            </div>
+            <small><i class="fa-solid fa-file-signature"></i> ${
+              item.author ? item.author : "-"
+            }</small>
+          </div>`;
 
     const detailSection = document.createElement("div");
     detailSection.innerHTML = template;

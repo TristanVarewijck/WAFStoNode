@@ -1,16 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-GB">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>homepage</title>
-    <link rel="stylesheet" href="./style.css" />
-    <script
-      src="https://kit.fontawesome.com/08db6ddcac.js"
-      crossorigin="anonymous"
-    ></script>
-    <!-- <script src="./scripts/routes/routie.js"></script> -->
-  </head>
+  <%- include('layout') %>
 
   <body>
     <main data-route="landing">
@@ -19,7 +9,7 @@
           <li>
             <a href=" ">
               <img
-                src="./assets/logo/TechDefined-icon.svg"
+                src="./images/logo/TechDefined-icon.svg"
                 alt="TechDefined-logo.svg"
               />
             </a>
@@ -34,7 +24,7 @@
                 <input type="text" placeholder="search for a topic" />
                 <button type="submit">
                   <img
-                    src="./assets/icons/search-icon.svg"
+                    src="./images/icons/search-icon.svg"
                     alt="search-icon"
                     width="26px"
                   />
@@ -80,7 +70,7 @@
     </button>
 
     <!-- TEMPLATE PAGE -->
-    <!-- <main data-route="template">
+    <main data-route="template">
       <nav>
         <ul>
           <li>
@@ -94,16 +84,11 @@
       </nav>
       <section>
         <article></article>
+        <!-- form connect by id with the submit button  -->
         <form id="speechForm">
           <p role="textbox"></p>
         </form>
       </section>
-    </main> -->
-
-    <!-- <main data-route="error">
-      <h2>this is an error</h2>
-    </main> -->
-
-    <script src="scripts/app.js" type="module"></script>
+    </main>
   </body>
 </html>

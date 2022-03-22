@@ -23,7 +23,7 @@ const articleContent = (articles) => {
         article.urlToImage ? article.urlToImage : "./assets/icons/no-image.svg"
       })"></div>
       <article>
-      <a href=#article/${article.id}>
+      <a href=/articles/${article.id}>
         <h2>${article.title}</h2>
         </a>
           <div>
