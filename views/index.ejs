@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="en-GB">
-  <%- include('layout') %>
+<html lang="en">
+  <%- include('partials/layout') %>
 
   <body>
     <main data-route="landing">
@@ -9,7 +9,7 @@
           <li>
             <a href=" ">
               <img
-                src="./images/logo/TechDefined-icon.svg"
+                src="./assets/logo/TechDefined-icon.svg"
                 alt="TechDefined-logo.svg"
               />
             </a>
@@ -24,7 +24,7 @@
                 <input type="text" placeholder="search for a topic" />
                 <button type="submit">
                   <img
-                    src="./images/icons/search-icon.svg"
+                    src="./assets/icons/search-icon.svg"
                     alt="search-icon"
                     width="26px"
                   />
@@ -39,8 +39,8 @@
         <ul>
           <!-- filters container -->
         </ul>
+      
 
-        <h1><!-- search input --></h1>
         <!-- lOADING STATE -->
         <section>
           <i class="fas fa-spinner"></i>
@@ -51,44 +51,37 @@
         <section>
           <i class="fa-solid fa-question"></i>
           <p>
-            No results found for "<span> <!-- unvalid searchTerm --></span>"
+            No results found for "<span></span>"
             please try again..
           </p>
         </section>
-
-        <section>
+       
+        <section class="article-container">
           <ul>
-            <!-- articles container -->
+            <% apiData.forEach(function(data){ %>
+              <li>
+              <div>hello</div>
+                     <article>
+                     <a href=/articles/${article.id}>
+                       <h2>hello</h2>
+                       </a>
+                         <div>
+                         <small><i class="fa-solid fa-clock"></i>hello</small>
+                         <small><i class="fa-solid fa-file-signature"></i>hoi</small>
+                         </div>
+                     </article>
+                     </li>
+            <% }); %>
           </ul>
         </section>
-      </section>
+        </section>
+      
     </main>
+
 
     <button title="Go to top">
-      <!-- scroll button -->
       <i class="fa-solid fa-arrow-up"></i>
     </button>
-
-    <!-- TEMPLATE PAGE -->
-    <main data-route="template">
-      <nav>
-        <ul>
-          <li>
-            <a href="#"></a>
-          </li>
-
-          <li>
-            <a href="https://twitter.com/intent/tweet" target="_blank"></a>
-          </li>
-        </ul>
-      </nav>
-      <section>
-        <article></article>
-        <!-- form connect by id with the submit button  -->
-        <form id="speechForm">
-          <p role="textbox"></p>
-        </form>
-      </section>
-    </main>
+    <script src="scripts/app.js" type="module"></script>
   </body>
 </html>
