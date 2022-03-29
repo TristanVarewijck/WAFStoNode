@@ -16,6 +16,7 @@
             <p>
               <!-- current date -->
             </p>
+            <p><%= currentDate %></p>
           </li>
 
           <li>
@@ -58,16 +59,16 @@
        
         <section class="article-container">
           <ul>
-            <% apiData.forEach(function(data){ %>
+            <% cleanedData.forEach(function(item){ %>
               <li>
-              <div>hello</div>
+              <div></div>
                      <article>
                      <a href=/articles/${article.id}>
-                       <h2>hello</h2>
+                       <h2><%=item.title%><h2>
                        </a>
                          <div>
-                         <small><i class="fa-solid fa-clock"></i>hello</small>
-                         <small><i class="fa-solid fa-file-signature"></i>hoi</small>
+                         <small><i class="fa-solid fa-clock"></i><%=item.author%></small>
+                         <small><i class="fa-solid fa-file-signature"></i><%=item.publishedAt%></small>
                          </div>
                      </article>
                      </li>
