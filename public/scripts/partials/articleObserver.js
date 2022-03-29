@@ -1,8 +1,10 @@
+const items = document.querySelectorAll(".articleCard:not(:first-of-type)");
+
 const config = {
   threshold: [0.5],
 };
 
-function articleObserver(items) {
+function articleObserver() {
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {

@@ -1,10 +1,9 @@
 var express = require("express");
 var router = express.Router();
 const axios = require("axios").default;
-require("dotenv").config();
-
 const cleanData = require("../data/cleanData");
-const currentDate = require("../partials/currentDate");
+
+require("dotenv").config();
 
 /* GET home page. */
 router.get("/", async (req, res) => {
@@ -14,7 +13,10 @@ router.get("/", async (req, res) => {
   })
     .then((response) => cleanData.cleanData(response))
     .then((cleanedData) => {
-      res.render("index", { cleanedData, currentDate });
+      res.render("index", {
+        cleanedData: cleanedData,
+        title: "TechDefined",
+      });
     })
     .catch(function (err) {
       console.log(err);

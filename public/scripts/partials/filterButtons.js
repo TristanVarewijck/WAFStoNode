@@ -15,11 +15,11 @@ const filters = [
 function addFilters() {
   filters.forEach((filter) => {
     const filterItem = document.createElement("li");
-    filterItem.className = "filterItem";
+    // filterItem.className = "filterItem";
     filtersContainer.appendChild(filterItem);
 
     const filterButton = document.createElement("button");
-    filterButton.className = "filterButton";
+    // filterButton.className = "filterButton";
     filterButton.value = filter;
     filterItem.appendChild(filterButton);
     filterButton.innerHTML = filter;
