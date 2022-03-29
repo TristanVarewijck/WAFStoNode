@@ -1,5 +1,6 @@
 const mybutton = document.querySelector("body > button");
 const navbar = document.querySelectorAll("nav");
+console.log(navbar);
 let prevScrollpos = window.scrollY;
 
 function onScroll() {
