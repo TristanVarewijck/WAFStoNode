@@ -183,3 +183,9 @@ Usage is provided under the [MIT License](https://github.com/git/git-scm.com/blo
 <!-- We all stand on the shoulders of giants, please link all the sources you used in to create this project. -->
 
 <!-- How about a license here? When in doubt use GNU GPL v3. 📜  -->
+
+1. Buttons click
+2. set post to get request
+3. styling
+4. photos
+5. text to voice function

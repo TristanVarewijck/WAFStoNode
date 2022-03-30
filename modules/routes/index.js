@@ -9,7 +9,9 @@ if (typeof localStorage === "undefined" || localStorage === null) {
 }
 
 /* GET home page. */
-router.get("/search:param", async (req, res) => {
+router.get("/", async (req, res) => {
+  let searchValue;
+  console.log(searchValue);
   await axios({
     method: "GET",
     url: `https://newsapi.org/v2/top-headlines?country=us&category=technology&pageSize=100&apiKey=${process.env.API_KEY}`,
@@ -19,6 +21,31 @@ router.get("/search:param", async (req, res) => {
       res.render("index", {
         cleanedData: cleanedData,
         title: "TechDefined",
+        searchValue: searchValue,
+      });
+      const jsonArr = JSON.stringify(cleanedData);
+      localStorage.setItem("data", jsonArr);
+    })
+    .catch(function (err) {
+      console.log(err);
+    });
+});
+
+// should be a get request but i used post -_-
+router.post("/", async (req, res) => {
+  let searchValue = req.body.input;
+  console.log(searchValue);
+  await axios({
+    method: "GET",
+    url: `https://newsapi.org/v2/everything?q=${searchValue}&sortBy=publishedAt&language=en&pageSize=100&apiKey=${process.env.API_KEY}`,
+  })
+    .then((response) => cleanData.cleanData(response))
+    .then((cleanedData) => {
+      console.log(cleanedData);
+      res.render("index", {
+        title: "TechDefined",
+        searchResults: cleanedData,
+        searchValue: searchValue,
       });
       const jsonArr = JSON.stringify(cleanedData);
       localStorage.setItem("data", jsonArr);
