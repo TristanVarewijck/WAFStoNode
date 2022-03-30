@@ -9,7 +9,7 @@ if (typeof localStorage === "undefined" || localStorage === null) {
 }
 
 /* GET home page. */
-router.get("/search:param", async (req, res) => {
+router.get("/", async (req, res) => {
   await axios({
     method: "GET",
     url: `https://newsapi.org/v2/top-headlines?country=us&category=technology&pageSize=100&apiKey=${process.env.API_KEY}`,
@@ -27,5 +27,3 @@ router.get("/search:param", async (req, res) => {
       console.log(err);
     });
 });
-
-module.exports = router;
