@@ -1,12 +1,12 @@
 var express = require("express");
 var router = express.Router();
-
 /* GET users listing. */
-router.get("/", function (req, res, next) {
-  // res.send(req.params.id);
+router.get("/articles/:id", async (req, res) => {
+  let { id } = req.params;
+  let existing = JSON.parse(localStorage.getItem("data"));
+  let detailItem = existing.find((i) => i.id === id);
 
-  console.log("detail page");
-  res.render("detail");
+  res.render("detail", { detailItem });
 });
 
 module.exports = router;

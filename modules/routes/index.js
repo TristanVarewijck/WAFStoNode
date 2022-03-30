@@ -2,8 +2,11 @@ var express = require("express");
 var router = express.Router();
 const axios = require("axios").default;
 const cleanData = require("../data/cleanData");
-
 require("dotenv").config();
+if (typeof localStorage === "undefined" || localStorage === null) {
+  var LocalStorage = require("node-localstorage").LocalStorage;
+  localStorage = new LocalStorage("./scratch");
+}
 
 /* GET home page. */
 router.get("/", async (req, res) => {
@@ -17,9 +20,12 @@ router.get("/", async (req, res) => {
         cleanedData: cleanedData,
         title: "TechDefined",
       });
+      const jsonArr = JSON.stringify(cleanedData);
+      localStorage.setItem("data", jsonArr);
     })
     .catch(function (err) {
       console.log(err);
     });
 });
+
 module.exports = router;

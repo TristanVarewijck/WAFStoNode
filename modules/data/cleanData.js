@@ -4,13 +4,14 @@ function cleanData(response) {
     return {
       title: item.title,
       img: item.urlToImage,
-      id: index,
+      id: `${index}`,
       publishedAt: parseDate(item.publishedAt),
       author: item.author,
       content: item.content,
     };
   });
-  console.log(cleanedData);
+
+  module.exports = { cleanedData };
   return cleanedData;
 }
 
