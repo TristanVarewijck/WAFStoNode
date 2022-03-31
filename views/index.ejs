@@ -73,7 +73,7 @@
             <% if(searchValue === undefined){ %>
               <% cleanedData.forEach(function(item){ %>
                 <li class="articleCard">
-                <div></div>
+                <div><img src="<%=item.img%>" alt="article image"></div>
                        <article>
                        <a href="/articles/<%=item.id%>">
                          <h2><%=item.title%><h2>
@@ -88,7 +88,7 @@
               <% } else { %>
                 <% searchResults.forEach(function(item){ %>
                   <li class="articleCard">
-                  <div></div>
+                  <div><img src="<%=item.img%>" alt="article image"></div>
                          <article>
                          <a href="/articles/<%=item.id%>">
                            <h2><%=item.title%><h2>
@@ -101,7 +101,6 @@
                          </li>
                 <% }); %>
                 <% } %>
-        
           </ul>
         </section>
         </section>

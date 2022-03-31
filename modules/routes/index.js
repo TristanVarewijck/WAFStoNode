@@ -22,8 +22,11 @@ router.get("/", async (req, res) => {
         cleanedData: cleanedData,
         searchValue: searchValue,
       });
+
+      let name = "tristan";
       const jsonArr = JSON.stringify(cleanedData);
       localStorage.setItem("data", jsonArr);
+      localStorage.setItem("person", name);
     })
     .catch(function (err) {
       console.log(err);
