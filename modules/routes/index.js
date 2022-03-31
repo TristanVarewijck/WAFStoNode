@@ -8,10 +8,9 @@ if (typeof localStorage === "undefined" || localStorage === null) {
   localStorage = new LocalStorage("./scratch");
 }
 
-/* GET home page. */
+/* HOME PAGE. */
 router.get("/", async (req, res) => {
   let searchValue;
-  console.log(searchValue);
   await axios({
     method: "GET",
     url: `https://newsapi.org/v2/top-headlines?country=us&category=technology&pageSize=100&apiKey=${process.env.API_KEY}`,
@@ -19,8 +18,8 @@ router.get("/", async (req, res) => {
     .then((response) => cleanData.cleanData(response))
     .then((cleanedData) => {
       res.render("index", {
-        cleanedData: cleanedData,
         title: "TechDefined",
+        cleanedData: cleanedData,
         searchValue: searchValue,
       });
       const jsonArr = JSON.stringify(cleanedData);
@@ -31,6 +30,7 @@ router.get("/", async (req, res) => {
     });
 });
 
+// SEARCH ITEM
 // should be a get request but i used post -_-
 router.post("/", async (req, res) => {
   let searchValue = req.body.input;
