@@ -1,0 +1,10 @@
+{
+  "name": "TechDefined",
+  "short_name": "TD",
+  "theme_color": "#001aff",
+  "background_color": "#fcfbff",
+  "display": "standalone",
+  "scope": "http://localhost:4000/",
+  "start_url": "/",
+  "orientation": "portrait-primary"
+}
