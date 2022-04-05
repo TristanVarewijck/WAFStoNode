@@ -3,10 +3,12 @@ var express = require("express");
 var path = require("path");
 var cookieParser = require("cookie-parser");
 var logger = require("morgan");
+const minify = require("express-minify");
 
 var indexRouter = require(".");
 var detailRouter = require("./detail");
 var searchRouter = require("./search");
+var offlineRouter = require("./offline");
 
 var app = express();
 
@@ -20,9 +22,12 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static("public"));
 
+app.use(minify());
+
 app.use("/", indexRouter);
 app.use("/", detailRouter);
 app.use("/", searchRouter);
+app.use("/", offlineRouter);
 // app.use("/", indexRouter);
 
 // catch 404 and forward to error handler
