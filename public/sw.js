@@ -1,6 +1,6 @@
 // when static  files are changed update them under a new cache name
 const staticCacheName = "site-static-v1";
-const dynamicCache = "site-dynamic-v1";
+const dynamicCacheName = "site-dynamic-v1";
 const assets = [
   "/",
   "/offline",
@@ -13,9 +13,11 @@ const assets = [
   "/css/style.css",
   "/assets/logo/TechDefined-icon.svg",
   "/assets/icons/search-icon.svg",
+  "/offline.ejs",
   // "https://kit.fontawesome.com/08db6ddcac.js",
 ];
 
+// INSTALL
 // check if serviceWorker is intalled
 self.addEventListener("install", (evt) => {
   evt.waitUntil(
@@ -25,6 +27,7 @@ self.addEventListener("install", (evt) => {
   );
 });
 
+// ACTIVATE
 // activate serviceWorker
 self.addEventListener("activate", (evt) => {
   evt.waitUntil(
@@ -32,14 +35,14 @@ self.addEventListener("activate", (evt) => {
     caches.keys().then((keys) => {
       return Promise.all(
         keys
-          .filter((key) => key !== staticCacheName)
+          .filter((key) => key !== staticCacheName && key !== dynamicCacheName)
           .map((key) => caches.delete(key))
       );
     })
   );
 });
 
-// fetch events
+// FETCH EVENTS
 self.addEventListener("fetch", (evt) => {
   // interupt the request before it goes to the server
   evt.respondWith(
@@ -48,12 +51,12 @@ self.addEventListener("fetch", (evt) => {
       return (
         cacheRes ||
         fetch(evt.request).then((fetchRes) => {
-          return caches.open(dynamicCache).then((cache) => {
+          return caches.open(dynamicCacheName).then((cache) => {
             cache.put(evt.request.url, fetchRes.clone());
             return fetchRes;
           });
         })
-      );
+      ).catch(() => catches.match("/offline"));
     })
   );
 });
