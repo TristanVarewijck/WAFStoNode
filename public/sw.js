@@ -3,17 +3,10 @@ const staticCacheName = "site-static-v1";
 const dynamicCacheName = "site-dynamic-v1";
 const assets = [
   "/",
-  "/offline",
-  "/scripts/app.js",
-  "/scripts/sw-register.js",
-  "/scripts/partials/articleObserver.js",
-  "/scripts/partials/onScroll.js",
-  "/scripts/partials/parseCurrentDate.js",
-  "/scripts/partials/toTopButton.js",
   "/css/style.css",
   "/assets/logo/TechDefined-icon.svg",
   "/assets/icons/search-icon.svg",
-  "/offline.ejs",
+  "/html/offline.html",
   // "https://kit.fontawesome.com/08db6ddcac.js",
 ];
 
@@ -50,13 +43,15 @@ self.addEventListener("fetch", (evt) => {
     caches.match(evt.request).then((cacheRes) => {
       return (
         cacheRes ||
-        fetch(evt.request).then((fetchRes) => {
-          return caches.open(dynamicCacheName).then((cache) => {
-            cache.put(evt.request.url, fetchRes.clone());
-            return fetchRes;
-          });
-        })
-      ).catch(() => catches.match("/offline"));
+        fetch(evt.request)
+          .then((fetchRes) => {
+            return caches.open(dynamicCacheName).then((cache) => {
+              cache.put(evt.request.url, fetchRes.clone());
+              return fetchRes;
+            });
+          })
+          .catch(() => caches.match("/html/offline.html"))
+      );
     })
   );
 });
