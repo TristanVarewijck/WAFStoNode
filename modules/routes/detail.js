@@ -7,7 +7,6 @@ router.get("/articles/:id", async (req, res) => {
   let detailItem = existing.find((i) => i.id === id);
   res.render("detail", {
     detailItem: detailItem,
-    title: detailItem.title,
   });
 });
 

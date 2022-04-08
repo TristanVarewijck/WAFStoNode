@@ -47,10 +47,10 @@ router.post("/", async (req, res) => {
       let currentDate = new Date().toLocaleDateString().replaceAll("-", " / ");
       console.log(currentDate);
       res.render("index", {
-        title: "TechDefined",
+        // title: "TechDefined",
         searchResults: cleanedData,
         searchValue: searchValue,
-        currentData: currentDate,
+        // currentData: currentDate,
       });
       const jsonArr = JSON.stringify(cleanedData);
       localStorage.setItem("data", jsonArr);

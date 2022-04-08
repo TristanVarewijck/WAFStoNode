@@ -3,13 +3,12 @@
   <%- include('partials/layout') %>
 
   <body>
-    <h1><%= detailItem.title %></h1>
     <!-- TEMPLATE PAGE -->
     <main data-route="template">
       <nav>
         <ul>
           <li>
-            <a aria-label="Homepage" href="/">hallo</a>
+            <a aria-label="Homepage" href="/"></a>
           </li>
 
           <li>
@@ -22,7 +21,33 @@
         </ul>
       </nav>
       <section>
-        <article></article>
+        <article>
+          
+          <div>
+            <div>
+              <div><img src="<%=detailItem.img%>" alt="article image" /></div>
+            </div>
+            <h2><%=detailItem.title%></h2>
+            <div>
+              <small
+                ><i class="fa-solid fa-file-signature"></i
+                ><%=detailItem.author%></small
+              >
+              <div>
+                <button form="speechForm" type="submit">
+                  <i class="fa-solid fa-headphones"></i>
+                </button>
+                <button class="hidden" type="button">
+                  <!-- default state is "hidden"-->
+                  <i class="fa-solid fa-stop"></i>
+                </button>
+              </div>
+              <small
+                ><i class="fa-solid fa-clock"></i
+                ><%=detailItem.publishedAt%></small
+              >
+            </div>
+        </article>
         <form id="speechForm">
           <p role="textbox"></p>
         </form>
