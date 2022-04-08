@@ -3,7 +3,7 @@ const staticCacheName = "site-static-v3";
 const dynamicCacheName = "site-dynamic-v3";
 const assets = [
   "/",
-  "/css/style.css",
+  // "/css/style.css",
   "/assets/logo/TechDefined-icon.svg",
   "/assets/icons/search-icon.svg",
   "/html/offline.html",

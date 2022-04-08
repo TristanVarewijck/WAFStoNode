@@ -22,34 +22,35 @@
       </nav>
       <section>
         <article>
-          
           <div>
-            <div>
-              <div><img src="<%=detailItem.img%>" alt="article image" /></div>
-            </div>
-            <h2><%=detailItem.title%></h2>
-            <div>
-              <small
-                ><i class="fa-solid fa-file-signature"></i
-                ><%=detailItem.author%></small
-              >
+            <img src="<%=detailItem.img%>" alt="article image" />
+          </div>
+
+
+          <h2><%=detailItem.title%></h2>
+          
+
+          <div>
+            <small
+              ><i class="fa-solid fa-file-signature"></i><%=detailItem.author%>
+            </small >
+              
               <div>
-                <button form="speechForm" type="submit">
-                  <i class="fa-solid fa-headphones"></i>
-                </button>
-                <button class="hidden" type="button">
-                  <!-- default state is "hidden"-->
-                  <i class="fa-solid fa-stop"></i>
-                </button>
-              </div>
-              <small
-                ><i class="fa-solid fa-clock"></i
-                ><%=detailItem.publishedAt%></small
-              >
+              <button form="speechForm" type="submit">
+                <i class="fa-solid fa-headphones"></i>
+              </button>
+              <button class="hidden" type="button">
+                <!-- default state is "hidden"-->
+                <i class="fa-solid fa-stop"></i>
+              </button>
+            </div>
+
+            <smalL><i class="fa-solid fa-clock"></i><%=detailItem.publishedAt%></small>
+          </div>
             </div>
         </article>
         <form id="speechForm">
-          <p role="textbox"></p>
+          <p role="textbox">Hello World!</p>
         </form>
       </section>
     </main>

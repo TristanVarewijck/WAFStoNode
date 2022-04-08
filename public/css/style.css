@@ -4,7 +4,7 @@
 }
 
 :root {
-  --background: #fcfbff;
+  --background: green;
   --text: #43466a;
   --highlight: #ffffff;
   --gray: #cecece;
@@ -170,13 +170,25 @@ main[data-route="landing"] nav ul li:nth-child(2) form > div {
   box-shadow: 0px 2.9822px 24px rgba(139, 168, 255, 0.15);
 }
 
-main[data-route="landing"] nav ul li:nth-child(2) form > div input[type="text"] {
+main[data-route="landing"]
+  nav
+  ul
+  li:nth-child(2)
+  form
+  > div
+  input[type="text"] {
   background-color: var(--highlight);
   border: none;
   width: 100%;
   color: var(--text);
 }
-main[data-route="landing"] nav ul li:nth-child(2) form > div input[type="text"]::placeholder {
+main[data-route="landing"]
+  nav
+  ul
+  li:nth-child(2)
+  form
+  > div
+  input[type="text"]::placeholder {
   color: var(--text);
   font-family: "Lato", sans-serif;
   font-size: 14px;
@@ -328,7 +340,12 @@ main[data-route="landing"] section section:last-of-type ul {
   margin-top: 2em;
 }
 
-main[data-route="landing"] section section:last-of-type ul li:first-of-type div:first-child {
+main[data-route="landing"]
+  section
+  section:last-of-type
+  ul
+  li:first-of-type
+  div:first-child {
   box-shadow: 4px 5px 18px rgba(219, 219, 219, 0.15);
   border-radius: 19px;
   width: 100%;
@@ -339,25 +356,46 @@ main[data-route="landing"] section section:last-of-type ul li:first-of-type div:
   overflow: hidden;
 }
 
-main[data-route="landing"] section section:last-of-type ul li:first-of-type div:first-child > img {
+main[data-route="landing"]
+  section
+  section:last-of-type
+  ul
+  li:first-of-type
+  div:first-child
+  > img {
   object-fit: cover;
   width: 100%;
   height: 100%;
 }
 
-main[data-route="landing"] section section:last-of-type ul li:first-of-type article {
+main[data-route="landing"]
+  section
+  section:last-of-type
+  ul
+  li:first-of-type
+  article {
   padding: 1em 1.5em 1em 1.5em;
   display: block;
 }
 
-main[data-route="landing"] section section:last-of-type ul li:first-of-type article div {
+main[data-route="landing"]
+  section
+  section:last-of-type
+  ul
+  li:first-of-type
+  article
+  div {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
 /* SMALL CARDS */
-main[data-route="landing"] section section:last-of-type ul li:not(:first-of-type) {
+main[data-route="landing"]
+  section
+  section:last-of-type
+  ul
+  li:not(:first-of-type) {
   display: flex;
   align-items: center;
   justify-content: start;
@@ -366,12 +404,22 @@ main[data-route="landing"] section section:last-of-type ul li:not(:first-of-type
   background-color: var(--background);
 }
 
-main[data-route="landing"] section section:last-of-type ul li:not(:first-of-type) h2 {
+main[data-route="landing"]
+  section
+  section:last-of-type
+  ul
+  li:not(:first-of-type)
+  h2 {
   font-size: 1em;
   font-weight: 500;
 }
 
-main[data-route="landing"] section section:last-of-type ul li:not(:first-of-type) div:first-child {
+main[data-route="landing"]
+  section
+  section:last-of-type
+  ul
+  li:not(:first-of-type)
+  div:first-child {
   border-radius: 4px;
   width: 4.688em;
   height: 4.688em;
@@ -382,7 +430,13 @@ main[data-route="landing"] section section:last-of-type ul li:not(:first-of-type
   overflow: hidden;
 }
 
-main[data-route="landing"] section section:last-of-type ul li:not(:first-of-type) div:first-child img {
+main[data-route="landing"]
+  section
+  section:last-of-type
+  ul
+  li:not(:first-of-type)
+  div:first-child
+  img {
   object-fit: cover;
   width: 100%;
   height: 100%;
@@ -399,7 +453,13 @@ main[data-route="landing"] section section:last-of-type ul li p {
   opacity: 0.87;
 }
 
-main[data-route="landing"] section section:last-of-type ul li article div:nth-child(2) {
+main[data-route="landing"]
+  section
+  section:last-of-type
+  ul
+  li
+  article
+  div:nth-child(2) {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -438,7 +498,7 @@ body > button:hover {
 }
 
 /* ARTICLE IMAGE */
-main[data-route="template"] section article div:nth-of-type(3) {
+/* main[data-route="template"] section article div:nth-of-type(3) {
   box-shadow: 4px 5px 18px rgba(219, 219, 219, 0.15);
   border-radius: 19px;
   width: 100%;
@@ -453,7 +513,7 @@ main[data-route="template"] section article div:nth-of-type(4) img {
   object-fit: cover;
   height: 100%;
   width: 100%;
-}
+} */
 
 /* NAVBAR LINKS */
 main[data-route="template"] nav ul li a {
@@ -485,15 +545,19 @@ main[data-route="template"] nav ul li a:hover {
 }
 
 /* TEMPLATE PAGE ELEMENTS */
-main[data-route="template"] section > div:first-of-type {
-  margin-top: 2.2em;
+main[data-route="template"] section article > div:first-of-type {
+  box-shadow: 4px 5px 18px rgba(219, 219, 219, 0.15);
+  border-radius: 19px;
+  width: 100%;
+  height: 300px;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  background: white;
 }
 
-main[data-route="template"] section > div:first-of-type img {
+main[data-route="template"] section article div:first-of-type img {
   object-fit: cover;
   width: 100%;
   height: 100%;
@@ -515,7 +579,7 @@ main[data-route="template"] p {
   text-align: justify;
 }
 
-main[data-route="template"] section div:nth-of-type(2) {
+main[data-route="template"] section article div:nth-of-type(2) {
   display: flex;
   justify-content: space-between;
   align-items: center;

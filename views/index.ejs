@@ -73,7 +73,9 @@
             <% if(searchValue === undefined){ %>
               <% cleanedData.forEach(function(item){ %>
                 <li class="articleCard">
-                <div><img loading="lazy" src="<%=item.img%>" alt="<%=item.title%>"></div>
+                <div>
+                  <img loading="lazy" src="<%=item.img%>" alt="<%=item.title%>">
+                </div>
                        <article>
                        <a aria-label="Articel Detail Page" href="/articles/<%=item.id%>">
                          <h2><%=item.title%><h2>
