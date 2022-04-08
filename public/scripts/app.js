@@ -1,5 +1,5 @@
 // IMPORTS
-import { parseDate } from "./partials/parseCurrentDate.js";
+// import { parseDate } from "./partials/parseCurrentDate.js";
 import { scrollToTop } from "./partials/toTopButton.js";
 import { onScroll } from "./partials/onScroll.js";
 import { articleObserver } from "./partials/articleObserver.js";
@@ -17,7 +17,7 @@ window.onscroll = () => {
 scrollToTop();
 
 // CURRENT DATE
-parseDate();
+// parseDate();
 
 // OBSERVE ANIMATION CARDS
 articleObserver();

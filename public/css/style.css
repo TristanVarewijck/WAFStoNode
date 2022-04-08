@@ -1,14 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;1,400&family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
-/*  font-family: "Lato", sans-serif */
-/*  font-family: "Noto Sans", sans-serif */
-
 * {
   scroll-behavior: smooth;
   overflow-x: hidden;
 }
 
 :root {
-  --background: #fcfbff;
+  --background: green;
   --text: #43466a;
   --highlight: #ffffff;
   --gray: #cecece;
@@ -295,6 +291,7 @@ main[data-route="landing"] > section > ul {
   overflow-x: auto;
   flex-wrap: nowrap;
   margin-top: 2.2em;
+  margin-bottom: 1.2em;
 }
 
 main[data-route="landing"] > section > ul::-webkit-scrollbar {
@@ -328,6 +325,11 @@ main[data-route="landing"] > section > ul li button:active {
 
 /* ARTICLE CARDS */
 /* BIG CARD */
+
+main[data-route="landing"] section section:last-of-type ul {
+  margin-top: 2em;
+}
+
 main[data-route="landing"] section section:last-of-type ul li:first-of-type div:first-child {
   box-shadow: 4px 5px 18px rgba(219, 219, 219, 0.15);
   border-radius: 19px;

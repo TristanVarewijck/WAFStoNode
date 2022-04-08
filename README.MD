@@ -11,7 +11,7 @@ _Shields that represent my project - They change over time._
 ## Live Demo :clapper:
 
 See the latest updated demo here:
-[Link to DEMO](https://tristanvarewijck.github.io/TechDefined/)
+[Link to DEMO](https://pwa-news-node.herokuapp.com/)
 
 :rotating_light: **WARNING** :rotating_light: <br>
 API does not work in the live-demo to see the full experience of this app, make sure to clone it locally and run in on your localhost.

@@ -7,15 +7,15 @@
       <nav>
         <ul>
           <li>
-            <a href=" ">
+            <a href="/" aria-label="Homepage">
               <img
                 src="./assets/logo/TechDefined-icon.svg"
                 alt="TechDefined-logo.svg"
+                width="23"
+                height="auto"
               />
             </a>
-            <p>
-              <!-- current date -->
-            </p>
+            <p><%=currentData%></p>
           </li>
 
           <li>
@@ -32,6 +32,7 @@
                     src="./assets/icons/search-icon.svg"
                     alt="search-icon"
                     width="26px"
+                    height="auto"
                   />
                 </button>
               </div>
@@ -73,9 +74,9 @@
             <% if(searchValue === undefined){ %>
               <% cleanedData.forEach(function(item){ %>
                 <li class="articleCard">
-                <div><img src="<%=item.img%>" alt="article image"></div>
+                <div><img loading="lazy" src="<%=item.img%>" alt="<%=item.title%>"></div>
                        <article>
-                       <a href="/articles/<%=item.id%>">
+                       <a aria-label="Articel Detail Page" href="/articles/<%=item.id%>">
                          <h2><%=item.title%><h2>
                          </a>
                            <div>
@@ -90,7 +91,7 @@
                   <li class="articleCard">
                   <div><img src="<%=item.img%>" alt="article image"></div>
                          <article>
-                         <a href="/articles/<%=item.id%>">
+                         <a aria-label="Articel Detail Page" href="/articles/<%=item.id%>">
                            <h2><%=item.title%><h2>
                            </a>
                              <div>

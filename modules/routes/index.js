@@ -44,11 +44,13 @@ router.post("/", async (req, res) => {
   })
     .then((response) => cleanData.cleanData(response))
     .then((cleanedData) => {
-      console.log(cleanedData);
+      let currentDate = new Date().toLocaleDateString().replaceAll("-", " / ");
+      console.log(currentDate);
       res.render("index", {
         title: "TechDefined",
         searchResults: cleanedData,
         searchValue: searchValue,
+        currentData: currentDate,
       });
       const jsonArr = JSON.stringify(cleanedData);
       localStorage.setItem("data", jsonArr);

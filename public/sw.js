@@ -1,6 +1,6 @@
 // when static  files are changed update them under a new cache name
 const staticCacheName = "site-static-v2";
-const dynamicCacheName = "site-dynamic-v1";
+const dynamicCacheName = "site-dynamic-v2";
 const assets = [
   "/",
   "/css/style.css",
@@ -10,6 +10,17 @@ const assets = [
   // "https://kit.fontawesome.com/08db6ddcac.js",
 ];
 
+// LIMIT CACHE SIZE
+
+const limitCacheSize = (name, size) => {
+  caches.open(name).then((cache) => {
+    cache.keys().then((keys) => {
+      if (keys.length > size) {
+        cache.delete(keys[0]).then(limitCacheSize(name, size));
+      }
+    });
+  });
+};
 // INSTALL
 // check if serviceWorker is intalled
 self.addEventListener("install", (evt) => {
@@ -47,6 +58,7 @@ self.addEventListener("fetch", (evt) => {
           .then((fetchRes) => {
             return caches.open(dynamicCacheName).then((cache) => {
               cache.put(evt.request.url, fetchRes.clone());
+              limitCacheSize(dynamicCacheName, 3);
               return fetchRes;
             });
           })
