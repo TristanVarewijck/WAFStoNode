@@ -4,7 +4,7 @@
 }
 
 :root {
-  --background: green;
+  --background: #fcfbff;
   --text: #43466a;
   --highlight: #ffffff;
   --gray: #cecece;
@@ -554,7 +554,6 @@ main[data-route="template"] section article > div:first-of-type {
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  background: white;
 }
 
 main[data-route="template"] section article div:first-of-type img {

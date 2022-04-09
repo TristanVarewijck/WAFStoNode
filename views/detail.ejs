@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
   <%- include('partials/layout') %>
-
+  <script src="../scripts/partials/textToVoiceConfig.js" defer></script>
+  </head>
+  
   <body>
     <!-- TEMPLATE PAGE -->
     <main data-route="template">
@@ -25,11 +28,7 @@
           <div>
             <img src="<%=detailItem.img%>" alt="article image" />
           </div>
-
-
           <h2><%=detailItem.title%></h2>
-          
-
           <div>
             <small
               ><i class="fa-solid fa-file-signature"></i><%=detailItem.author%>
@@ -50,9 +49,13 @@
             </div>
         </article>
         <form id="speechForm">
-          <p role="textbox">Hello World!</p>
+          <p role="textbox"><%=detailItem.content%></p>
         </form>
       </section>
     </main>
+
+    <button title="Go to top">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
   </body>
 </html>

@@ -3,7 +3,6 @@
 import { scrollToTop } from "./partials/toTopButton.js";
 import { onScroll } from "./partials/onScroll.js";
 import { articleObserver } from "./partials/articleObserver.js";
-// import { getData } from "./data/fetch.js";
 
 const mybutton = document.querySelector("body > button");
 mybutton.addEventListener("click", scrollToTop);
