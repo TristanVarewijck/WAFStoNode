@@ -613,6 +613,34 @@ main[data-route="offline"] section {
   padding: 0 2em 0 2em;
 }
 
+main[data-route="offline"] nav {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 75px;
+  background-color: var(--background);
+  z-index: 99;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0 0.75em 0 0.75em;
+}
+
+main[data-route="offline"] nav img,
+p {
+  display: inline;
+}
+
+main[data-route="offline"] nav img {
+  margin-right: 1em;
+}
+
+main[data-route="offline"] section img {
+  margin-top: 3.8em;
+}
+
 main[data-route="offline"] h1 {
   margin-top: 2em;
   margin-bottom: 0.7em;
@@ -621,13 +649,8 @@ main[data-route="offline"] h1 {
   line-height: 1.25;
 }
 
-main[data-route="offline"] div {
-  margin-top: 65px;
-  width: 100%;
-  height: auto;
-  display: flex;
-  justify-content: start;
-  align-items: center;
+main[data-route="offline"] section p {
+  margin-bottom: 1.2em;
 }
 
 main[data-route="offline"] button {

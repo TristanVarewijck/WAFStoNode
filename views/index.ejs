@@ -22,14 +22,15 @@
           </li>
 
           <li>
-            <form action="/" method="POST">
+            <form action="/search" method="GET">
               <div>
                 <input 
                 type="text"  
                 placeholder="search for a topic"  
-                id="input" 
-                name="input"
-                value="<%=searchValue%>" />
+                id="search" 
+                name="search"
+                class="search"
+                >
                 <button type="submit">
                   <img
                     src="./assets/icons/search-icon.svg"

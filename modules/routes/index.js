@@ -18,16 +18,16 @@ router.get("/", async (req, res) => {
   })
     .then((response) => cleanData.cleanData(response))
     .then((cleanedData) => {
+      const jsonArr = JSON.stringify(cleanedData);
+      console.log(jsonArr);
+      localStorage.setItem("data", jsonArr);
+
       res.render("index", {
         title: "TechDefined",
         cleanedData: cleanedData,
         searchValue: searchValue,
         currentDate: currentDate,
       });
-
-      console.log(currentDate);
-      const jsonArr = JSON.stringify(cleanedData);
-      localStorage.setItem("data", jsonArr);
     })
     .catch(function (err) {
       console.log(err);
@@ -36,22 +36,26 @@ router.get("/", async (req, res) => {
 
 // SEARCH ITEM
 // should be a get request but i used post -_-
-router.post("/", async (req, res) => {
-  let searchValue = req.body.input;
+router.get("/search", async (req, res) => {
+  let searchValue = req.query.search;
+  console.log(searchValue);
+
   await axios({
     method: "GET",
     url: `https://newsapi.org/v2/everything?q=${searchValue}&sortBy=publishedAt&language=en&pageSize=50&apiKey=${process.env.API_KEY}`,
   })
     .then((response) => cleanData.cleanData(response))
     .then((cleanedData) => {
+      const jsonArr = JSON.stringify(cleanedData);
+      console.log(jsonArr);
+      localStorage.setItem("data", jsonArr);
+
       res.render("index", {
         title: "TechDefined",
         searchResults: cleanedData,
         searchValue: searchValue,
         currentDate: currentDate,
       });
-      const jsonArr = JSON.stringify(cleanedData);
-      localStorage.setItem("data", jsonArr);
     })
     .catch(function (err) {
       console.log(err);

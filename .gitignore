@@ -133,3 +133,5 @@ dist
 /test.json
 /scripts/apiProvider.js
 /scripts/articleAnimation.js
+
+.DS_Store
