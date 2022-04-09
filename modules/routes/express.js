@@ -7,7 +7,7 @@ const minify = require("express-minify");
 
 var indexRouter = require(".");
 var detailRouter = require("./detail");
-var searchRouter = require("./search");
+// var searchRouter = require("./search");
 var offlineRouter = require("./offline");
 
 var app = express();
@@ -26,7 +26,7 @@ app.use(minify());
 
 app.use("/", indexRouter);
 app.use("/", detailRouter);
-app.use("/", searchRouter);
+// app.use("/", searchRouter);
 app.use("/", offlineRouter);
 // app.use("/", indexRouter);
 

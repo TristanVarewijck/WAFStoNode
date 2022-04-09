@@ -1,13 +1,12 @@
 // when static  files are changed update them under a new cache name
-const staticCacheName = "site-static-v3";
-const dynamicCacheName = "site-dynamic-v3";
+const staticCacheName = "site-static-v2";
+const dynamicCacheName = "site-dynamic-v2";
 const assets = [
   "/",
-  // "/css/style.css",
+  "/css/style.css",
   "/assets/logo/TechDefined-icon.svg",
   "/assets/icons/search-icon.svg",
   "/html/offline.html",
-  // "https://kit.fontawesome.com/08db6ddcac.js",
 ];
 
 // LIMIT CACHE SIZE

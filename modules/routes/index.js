@@ -7,13 +7,14 @@ if (typeof localStorage === "undefined" || localStorage === null) {
   var LocalStorage = require("node-localstorage").LocalStorage;
   localStorage = new LocalStorage("./scratch");
 }
+let currentDate = new Date().toLocaleDateString().replaceAll("-", " / ");
 
 /* HOME PAGE. */
 router.get("/", async (req, res) => {
   let searchValue;
   await axios({
     method: "GET",
-    url: `https://newsapi.org/v2/top-headlines?country=us&category=technology&pageSize=100&apiKey=${process.env.API_KEY}`,
+    url: `https://newsapi.org/v2/top-headlines?country=us&category=technology&pageSize=50&apiKey=${process.env.API_KEY}`,
   })
     .then((response) => cleanData.cleanData(response))
     .then((cleanedData) => {
@@ -21,12 +22,12 @@ router.get("/", async (req, res) => {
         title: "TechDefined",
         cleanedData: cleanedData,
         searchValue: searchValue,
+        currentDate: currentDate,
       });
 
-      let name = "tristan";
+      console.log(currentDate);
       const jsonArr = JSON.stringify(cleanedData);
       localStorage.setItem("data", jsonArr);
-      localStorage.setItem("person", name);
     })
     .catch(function (err) {
       console.log(err);
@@ -37,20 +38,17 @@ router.get("/", async (req, res) => {
 // should be a get request but i used post -_-
 router.post("/", async (req, res) => {
   let searchValue = req.body.input;
-  console.log(searchValue);
   await axios({
     method: "GET",
-    url: `https://newsapi.org/v2/everything?q=${searchValue}&sortBy=publishedAt&language=en&pageSize=100&apiKey=${process.env.API_KEY}`,
+    url: `https://newsapi.org/v2/everything?q=${searchValue}&sortBy=publishedAt&language=en&pageSize=50&apiKey=${process.env.API_KEY}`,
   })
     .then((response) => cleanData.cleanData(response))
     .then((cleanedData) => {
-      let currentDate = new Date().toLocaleDateString().replaceAll("-", " / ");
-      console.log(currentDate);
       res.render("index", {
-        // title: "TechDefined",
+        title: "TechDefined",
         searchResults: cleanedData,
         searchValue: searchValue,
-        // currentData: currentDate,
+        currentDate: currentDate,
       });
       const jsonArr = JSON.stringify(cleanedData);
       localStorage.setItem("data", jsonArr);

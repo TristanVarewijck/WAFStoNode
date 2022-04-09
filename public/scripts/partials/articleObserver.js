@@ -8,13 +8,11 @@ function articleObserver() {
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        console.log("in the view");
         entry.target.classList.remove("invisible");
         entry.target.classList.add("visible");
         // STOP OBSERVING
         // observer.unobserve(entry.target);
       } else {
-        console.log("out of view");
         entry.target.classList.remove("visible");
         entry.target.classList.add("invisible");
       }

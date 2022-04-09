@@ -22,8 +22,6 @@ const speakButton = document.querySelector(
   "main[data-route=template] button:first-of-type "
 );
 
-console.log(textInput, cancelButton, speakButton);
-
 // TRIGGER
 speechForm.onsubmit = function speaking(event) {
   event.preventDefault();

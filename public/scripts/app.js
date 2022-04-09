@@ -8,6 +8,7 @@ const mybutton = document.querySelector("body > button");
 mybutton.addEventListener("click", scrollToTop);
 
 // ONSCROLL
+
 window.onscroll = () => {
   onScroll();
 };

@@ -74,6 +74,10 @@ p {
   list-style-type: none;
 }
 
+p {
+  opacity: 87%;
+}
+
 input {
   background: none;
   border: none;
@@ -497,24 +501,6 @@ body > button:hover {
   background-color: var(--text); /* Add a dark-grey background on hover */
 }
 
-/* ARTICLE IMAGE */
-/* main[data-route="template"] section article div:nth-of-type(3) {
-  box-shadow: 4px 5px 18px rgba(219, 219, 219, 0.15);
-  border-radius: 19px;
-  width: 100%;
-  height: 300px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-}
-
-main[data-route="template"] section article div:nth-of-type(4) img {
-  object-fit: cover;
-  height: 100%;
-  width: 100%;
-} */
-
 /* NAVBAR LINKS */
 main[data-route="template"] nav ul li a {
   background: var(--highlight);
@@ -620,4 +606,44 @@ main[data-route="template"] button {
   100% {
     border: 0.5px solid rgba(139, 168, 255, 0.2);
   }
+}
+
+/*  OFFLINE PAGE */
+main[data-route="offline"] section {
+  padding: 0 2em 0 2em;
+}
+
+main[data-route="offline"] h1 {
+  margin-top: 2em;
+  margin-bottom: 0.7em;
+  font-weight: 500;
+  font-size: 1.6em;
+  line-height: 1.25;
+}
+
+main[data-route="offline"] div {
+  margin-top: 65px;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+main[data-route="offline"] button {
+  border: 1px solid var(--action);
+  color: var(--action);
+  font-size: 16px;
+  padding: 8px 35px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 100;
+  transition: all 0.2s ease-in-out;
+}
+
+main[data-route="offline"] button:hover {
+  color: var(--highlight);
+  background: var(--action);
 }
