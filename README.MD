@@ -70,7 +70,7 @@ Om een offline experience mee te geven aan de app heb ik ervoor gezorgd dat wann
 <br>
 
 **Hier zie je de app in een online en een offline modus** <br>
-<img src="https://github.com/TristanVarewijck/WAFStoNode/blob/main/public/assets/images/home.png" alt="home" width="300px"/><img src="https://github.com/TristanVarewijck/WAFStoNode/blob/main/public/assets/images/offline.png" alt="offline"/>
+<img src="https://github.com/TristanVarewijck/WAFStoNode/blob/main/public/assets/images/home.png" alt="home" width="300px"/><img src="https://github.com/TristanVarewijck/WAFStoNode/blob/main/public/assets/images/offline.png" alt="offline" width="300px"/>
 
 ### Cache, service-worker and Manifest
 
