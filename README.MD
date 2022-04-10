@@ -90,12 +90,12 @@ Om dit een PWA te maken ben je verplicht om aan de browser een Manifest bestand 
 
 ## Server side
 
-Op de server render ik mijn pagina's die door de router de juiste html file renderen. De items die ik per pagina inlaad hebben invloed op de performance hieronder zie je de huidige performance en een aantal dingen die ik al gedaan heb om de performance te verbeteren.
+Op de server render ik mijn pagina's die door de router de juiste html file renderen. De items die ik per pagina inlaad hebben invloed op de performance hieronder zie je de huidige performance en een aantal dingen die ik al gedaan heb om de performance te verbeteren. De reden waarom we voor server-side rendering hebben gekozen is omdat dit ervoor zorgt dat pagina's sneller laden en het een beter user-experience geeft (url, service-workers etc)
 
 ### Performance
 
 Nu: <br>
-<img src="https://github.com/TristanVarewijck/WAFStoNode/blob/main/public/assets/images/performance-score.png" alt="newsapi-logo" width="450px"/>
+<img src="https://github.com/TristanVarewijck/WAFStoNode/blob/main/public/assets/images/performance-score.png" alt="newsapi-logo"/>
 
 De volgende dingen heb ik al gedaan om de performance te verbeteren.
 
@@ -117,7 +117,7 @@ Op de client heb ik een homepagina waarin je artikelen kan vinden gebaseerd op j
 
 ## API
 
-<img src="https://github.com/TristanVarewijck/TechDefined/blob/main/assets/images/newApi-LOGO.jpeg" alt="newsapi-logo" height="500px"/>
+<img src="https://github.com/TristanVarewijck/TechDefined/blob/main/assets/images/newApi-LOGO.jpeg" alt="newsapi-logo" height="250px"/>
 
 For this project i am using the NewsAPI from - [NewsAPI](https://newsapi.org/) <br>
 To search on the app im using the endpoints below with the following params:
