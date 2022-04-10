@@ -114,11 +114,11 @@ Ook zijn er nog een aantal dingen die ik nog beter zou kunnen maken zoals:
 
 Op de client heb ik een homepagina waarin je artikelen kan vinden gebaseerd op je zoekterm en wanneer je op een artikel klikt dat komt je bij een detail pagina waar je het artikel ook echt kan gaan lezen.
 
-<img src="https://github.com/TristanVarewijck/WAFStoNode/blob/main/public/assets/images/home.png" alt="home" width="200px"/><img src="https://github.com/TristanVarewijck/WAFStoNode/blob/main/public/assets/images/offline.png" alt="offline" width="200px"/>
+<img src="https://github.com/TristanVarewijck/WAFStoNode/blob/main/public/assets/images/home.png" alt="home" width="200px"/><img src="https://github.com/TristanVarewijck/WAFStoNode/blob/main/public/assets/images/offline.png" alt="offline" height="500px"/>
 
 ## API
 
-<img src="https://github.com/TristanVarewijck/TechDefined/blob/main/assets/images/newApi-LOGO.jpeg" alt="newsapi-logo" width="200px"/>
+<img src="https://github.com/TristanVarewijck/TechDefined/blob/main/assets/images/newApi-LOGO.jpeg" alt="newsapi-logo" height="500px"/>
 
 For this project i am using the NewsAPI from - [NewsAPI](https://newsapi.org/) <br>
 To search on the app im using the endpoints below with the following params:
