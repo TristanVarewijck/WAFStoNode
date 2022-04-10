@@ -1,3 +1,9 @@
+// const sharp = require("sharp");
+
+// sharp("../../assets/images/Default-flow.png")
+//   .resize(200, 200, { fit: "contain" })
+//   .toFile("out_1_jpg");
+
 function cleanData(response) {
   let data = response.data.articles;
   const cleanedData = data.map((item, index) => {

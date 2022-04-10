@@ -19,9 +19,9 @@ router.get("/", async (req, res) => {
     .then((response) => cleanData.cleanData(response))
     .then((cleanedData) => {
       const jsonArr = JSON.stringify(cleanedData);
-      console.log(jsonArr);
       localStorage.setItem("data", jsonArr);
 
+      console.log(cleanedData);
       res.render("index", {
         title: "TechDefined",
         cleanedData: cleanedData,
@@ -38,8 +38,6 @@ router.get("/", async (req, res) => {
 // should be a get request but i used post -_-
 router.get("/search", async (req, res) => {
   let searchValue = req.query.search;
-  console.log(searchValue);
-
   await axios({
     method: "GET",
     url: `https://newsapi.org/v2/everything?q=${searchValue}&sortBy=publishedAt&language=en&pageSize=50&apiKey=${process.env.API_KEY}`,
@@ -47,7 +45,6 @@ router.get("/search", async (req, res) => {
     .then((response) => cleanData.cleanData(response))
     .then((cleanedData) => {
       const jsonArr = JSON.stringify(cleanedData);
-      console.log(jsonArr);
       localStorage.setItem("data", jsonArr);
 
       res.render("index", {

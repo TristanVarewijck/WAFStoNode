@@ -134,4 +134,6 @@ dist
 /scripts/apiProvider.js
 /scripts/articleAnimation.js
 
-.DS_Store
+# minified files
+/public/html/offline.min.html
+/public/css/style.min.css

@@ -2,11 +2,11 @@
 const staticCacheName = "site-static-v1";
 // const dynamicCacheName = "site-dynamic-v1";
 const assets = [
-  "/css/style.css",
+  "/css/style.min.css",
   "/assets/logo/TechDefined-icon.svg",
   "/assets/icons/search-icon.svg",
   "/assets/icons/no-internet.svg",
-  "/html/offline.html", // offline page
+  "/html/offline.min.html", // offline page
 ];
 
 // LIMIT CACHE SIZE
