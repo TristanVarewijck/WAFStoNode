@@ -53,7 +53,7 @@ For the project PWA we had to convert our WAFS project into a progressive web ap
 Here you can see 2 activity diagrams on usual behaviours of the user of this app.
 
 1. Default Diagram <br>
-   <img src="https://github.com/TristanVarewijck/TechDefined/blob/main/assets/images/Default-flow.png" alt="default-flow" width="600px"/>
+   <img src="https://github.com/TristanVarewijck/WAFStoNode/blob/main/public/assets/images/Default-flow-no-internet.png" alt="default-flow" width="600px"/>
 
 ## Service Worker
 
@@ -70,10 +70,10 @@ Om een offline experience mee te geven aan de app heb ik ervoor gezorgd dat wann
 <br>
 
 **Dit is de pagina wanneer er een internet verbinding is:** <br>
-<img src="https://github.com/TristanVarewijck/WAFStoNode/blob/main/public/assets/images/home.png" alt="home" width="450px"/>
+<img src="https://github.com/TristanVarewijck/WAFStoNode/blob/main/public/assets/images/home.png" alt="home" width="300px"/>
 
 **Dit is de pagina wanneer de internet verbinding is weggevallen:** <br>
-<img src="https://github.com/TristanVarewijck/WAFStoNode/blob/main/public/assets/images/offline.png" alt="offline" width="450px"/>
+<img src="https://github.com/TristanVarewijck/WAFStoNode/blob/main/public/assets/images/offline.png" alt="offline" width="300px"/>
 
 ### Cache, service-worker and Manifest
 
@@ -83,14 +83,14 @@ In de cache zijn alle nodige elementen opgeslagen om de offline pagina op de jui
 
 Hieronder zie je dat de response van deze elementen goed is. <br>
 
-<img src="https://github.com/TristanVarewijck/WAFStoNode/blob/main/public/assets/images/SW-connect.png" alt="newsapi-logo" width="450px"/>
+<img src="https://github.com/TristanVarewijck/WAFStoNode/blob/main/public/assets/images/SW-connect.png" alt="newsapi-logo"/>
 
 Er is een connectie gemaakt met de service-worker (installed) <br>
-<img src="https://github.com/TristanVarewijck/WAFStoNode/blob/main/public/assets/images/registered.png" alt="install" width="450px"/>
+<img src="https://github.com/TristanVarewijck/WAFStoNode/blob/main/public/assets/images/registered.png" alt="install"/>
 
 Om dit een PWA te maken ben je verplicht om aan de browser een Manifest bestand mee te geven: <br>
 
-<img src="https://github.com/TristanVarewijck/WAFStoNode/blob/main/public/assets/images/manifest.png" alt="manifest" width="450px"/>
+<img src="https://github.com/TristanVarewijck/WAFStoNode/blob/main/public/assets/images/manifest.png" alt="manifest"/>
 
 ## Server side
 
@@ -117,8 +117,8 @@ Ook zijn er nog een aantal dingen die ik nog beter zou kunnen maken zoals:
 
 Op de client heb ik een homepagina waarin je artikelen kan vinden gebaseerd op je zoekterm en wanneer je op een artikel klikt dat komt je bij een detail pagina waar je het artikel ook echt kan gaan lezen.
 
-<img src="https://github.com/TristanVarewijck/WAFStoNode/blob/main/public/assets/images/home.png" alt="home" width="450px"/>
-<img src="https://github.com/TristanVarewijck/WAFStoNode/blob/main/public/assets/images/offline.png" alt="offline" width="450px"/>
+<img src="https://github.com/TristanVarewijck/WAFStoNode/blob/main/public/assets/images/home.png" alt="home" width="200px"/>
+<img src="https://github.com/TristanVarewijck/WAFStoNode/blob/main/public/assets/images/offline.png" alt="offline" width="200px"/>
 
 ## API
 
