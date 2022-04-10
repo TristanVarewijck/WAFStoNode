@@ -50,14 +50,15 @@ For the project PWA we had to convert our WAFS project into a progressive web ap
 
 ## Activity Diagram
 
-Here you see the most common flow in the app and how the service worker finds his place init.
+Here you see the most common-flow in the app and how the service-worker finds his place init.
 
 **Default Diagram** <br>
 <img src="https://github.com/TristanVarewijck/WAFStoNode/blob/main/public/assets/images/Default-flow-no-internet.png" alt="default-flow" width="600px"/>
 
 ## Service Worker
 
-In this project there is a service worker wich controls the cache use in this particular project is only used for displaying a offline page when there is no internet connection below you can see how this works in a diagram. In further project the strategy will be different when there are more static pages.
+In this project there is a service-worker wich controls the cache use in this particular project. Its used for displaying a offline page when there is no internet connection. Below you can see how this works in a diagram,
+in further projects the strategy will be different when there are more static pages.
 
 **Service worker diagram** <br>
 <img src="https://github.com/TristanVarewijck/WAFStoNode/blob/main/public/assets/images/Service-worker.png" alt="service-worker-flow"/>
@@ -74,29 +75,27 @@ Om een offline experience mee te geven aan de app heb ik ervoor gezorgd dat wann
 
 ### Cache, service-worker and Manifest
 
-In de cache zijn alle nodige elementen opgeslagen om de offline pagina op de juiste manieren te renderen. <br>
+In de cache zijn alle nodige elementen opgeslagen om de offline pagina op de juiste manier te renderen. <br>
 
 <img src="https://github.com/TristanVarewijck/WAFStoNode/blob/main/public/assets/images/cach-items.png" alt="cach"/>
 
-Hieronder zie je dat de response van deze elementen goed is. <br>
-
+Hieronder zie je dat de response van de offline.html goed is. <br>
 <img src="https://github.com/TristanVarewijck/WAFStoNode/blob/main/public/assets/images/SW-connect.png" alt="newsapi-logo"/>
 
 Er is een connectie gemaakt met de service-worker (installed) <br>
 <img src="https://github.com/TristanVarewijck/WAFStoNode/blob/main/public/assets/images/registered.png" alt="install"/>
 
 Om dit een PWA te maken ben je verplicht om aan de browser een Manifest bestand mee te geven: <br>
-
 <img src="https://github.com/TristanVarewijck/WAFStoNode/blob/main/public/assets/images/manifest.png" alt="manifest"/>
 
 ## Server side
 
-Op de server render ik mijn pagina's die door met router de juiste html file renderen. De items die ik per pagina inlaad hebben invloed op de performance hieronder zie je de huidige performance en een aantal dingen die ik al gedaan heb om de performance te verbeteren.
+Op de server render ik mijn pagina's die door de router de juiste html file renderen. De items die ik per pagina inlaad hebben invloed op de performance hieronder zie je de huidige performance en een aantal dingen die ik al gedaan heb om de performance te verbeteren.
 
 ### Performance
 
 Nu: <br>
-<img src="https://github.com/TristanVarewijck/TechDefined/blob/main/assets/images/newApi-LOGO.jpeg" alt="newsapi-logo" width="450px"/>
+<img src="https://github.com/TristanVarewijck/WAFStoNode/blob/main/public/assets/images/performance-score.png" alt="newsapi-logo" width="450px"/>
 
 De volgende dingen heb ik al gedaan om de performance te verbeteren.
 
