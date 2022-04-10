@@ -1,5 +1,5 @@
 // when static  files are changed update them under a new cache name
-const staticCacheName = "site-static-v1";
+const staticCacheName = "site-static-v3";
 // const dynamicCacheName = "site-dynamic-v1";
 const assets = [
   "/css/style.min.css",
@@ -61,7 +61,7 @@ self.addEventListener("fetch", (evt) => {
           //       return fetchRes;
           //     });
           //   })
-          .catch(() => caches.match("/html/offline.html"))
+          .catch(() => caches.match("/html/offline.min.html"))
       );
     })
   );

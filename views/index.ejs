@@ -79,7 +79,7 @@
               <% cleanedData.forEach(function(item){ %>
                 <li class="articleCard">
                 <div>
-                  <img loading="lazy" src="<%=item.img%>" alt="<%=item.title%>">
+                  <img class="lozad" src="<%=item.img%>" alt="<%=item.title%>">
                 </div>
                        <article>
                        <a aria-label="Articel Detail Page" href="/articles/<%=item.id%>">
@@ -119,4 +119,5 @@
       <i class="fa-solid fa-arrow-up"></i>
     </button>
   </body>
+  <script src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
 </html>
